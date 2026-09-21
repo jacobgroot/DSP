@@ -1,0 +1,1260 @@
+<HTML>
+  <HEAD>
+    <TITLE>TDM voor schema UHRIMP</TITLE>
+    <LINK href="HTML2Word.css" rel="STYLESHEET" type="text/css">
+  </HEAD>
+  <BODY>
+    <MARQUEE>Deze code is nog niet uitontwikkeld !!!</MARQUEE>
+    <BR><DIV class="titel">Technisch datamodel voor schema <CODE>UHRIMP</CODE></DIV>
+    <BR><DIV class="colofon">Versienummer: <CODE>2.4.0</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd op <CODE>2026/06/25 11:35:37</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd door de HTML2Word <CODE>FUNCTION</CODE> <CODE>GET_TAB_TF</CODE></DIV>
+    <BR><DIV class="colofon">Tabelbreedtes zijn geoptimaliseerd voor copy&amp;paste naar A4 formaat documenten in Word</DIV>
+    <H1>1 - Inhoudsopgave</H1><HR>
+      <A href="#Tabellen">2 - Tabellen</A>
+      <BR><SMALL><A href="#UI_ACTIVITEITEN">2.1 - UI_ACTIVITEITEN</A></SMALL>
+      <BR><SMALL><A href="#UI_BIJZONDERE_RECHTSTOESTAND">2.2 - UI_BIJZONDERE_RECHTSTOESTAND</A></SMALL>
+      <BR><SMALL><A href="#UI_BINNENLANDS_ADRES">2.3 - UI_BINNENLANDS_ADRES</A></SMALL>
+      <BR><SMALL><A href="#UI_BUITENLANDS_ADRES">2.4 - UI_BUITENLANDS_ADRES</A></SMALL>
+      <BR><SMALL><A href="#UI_BUITENLANDSE_VENNOOTSCHAP">2.5 - UI_BUITENLANDSE_VENNOOTSCHAP</A></SMALL>
+      <BR><SMALL><A href="#UI_CODE_SBICODE">2.6 - UI_CODE_SBICODE</A></SMALL>
+      <BR><SMALL><A href="#UI_COMMUN_GEGEVENS_MAATSCH_ACT">2.7 - UI_COMMUN_GEGEVENS_MAATSCH_ACT</A></SMALL>
+      <BR><SMALL><A href="#UI_COMMUN_GEGEVENS_RECHTSPERS">2.8 - UI_COMMUN_GEGEVENS_RECHTSPERS</A></SMALL>
+      <BR><SMALL><A href="#UI_COMMUN_GEGEVENS_VESTIGING">2.9 - UI_COMMUN_GEGEVENS_VESTIGING</A></SMALL>
+      <BR><SMALL><A href="#UI_COMMUNICATIEGEGEVENS">2.10 - UI_COMMUNICATIEGEGEVENS</A></SMALL>
+      <BR><SMALL><A href="#UI_COMM_VESTIGINGRELATIE">2.11 - UI_COMM_VESTIGINGRELATIE</A></SMALL>
+      <BR><SMALL><A href="#UI_HANDELSNAAM">2.12 - UI_HANDELSNAAM</A></SMALL>
+      <BR><SMALL><A href="#UI_LOCATIE">2.13 - UI_LOCATIE</A></SMALL>
+      <BR><SMALL><A href="#UI_LOCATIE_BUITENL_VENNOOTSCH">2.14 - UI_LOCATIE_BUITENL_VENNOOTSCH</A></SMALL>
+      <BR><SMALL><A href="#UI_LOCATIE_MAATSCH_ACTIVITEIT">2.15 - UI_LOCATIE_MAATSCH_ACTIVITEIT</A></SMALL>
+      <BR><SMALL><A href="#UI_LOCATIE_PERSOON">2.16 - UI_LOCATIE_PERSOON</A></SMALL>
+      <BR><SMALL><A href="#UI_LOCATIE_RECHTSPERSOON">2.17 - UI_LOCATIE_RECHTSPERSOON</A></SMALL>
+      <BR><SMALL><A href="#UI_LOCATIE_VESTIGING">2.18 - UI_LOCATIE_VESTIGING</A></SMALL>
+      <BR><SMALL><A href="#UI_MAATSCHAPPELIJKE_ACTIVITEIT">2.19 - UI_MAATSCHAPPELIJKE_ACTIVITEIT</A></SMALL>
+      <BR><SMALL><A href="#UI_NAAMPERSOON">2.20 - UI_NAAMPERSOON</A></SMALL>
+      <BR><SMALL><A href="#UI_NATUURLIJKPERSOON">2.21 - UI_NATUURLIJKPERSOON</A></SMALL>
+      <BR><SMALL><A href="#UI_NIET_COMM_VESTIGINGRELATIE">2.22 - UI_NIET_COMM_VESTIGINGRELATIE</A></SMALL>
+      <BR><SMALL><A href="#UI_ONDERNEMING">2.23 - UI_ONDERNEMING</A></SMALL>
+      <BR><SMALL><A href="#UI_ONDERN_HANDELSNAAM_RELATIE">2.24 - UI_ONDERN_HANDELSNAAM_RELATIE</A></SMALL>
+      <BR><SMALL><A href="#UI_PERSOON">2.25 - UI_PERSOON</A></SMALL>
+      <BR><SMALL><A href="#UI_RECHTSPERSOON">2.26 - UI_RECHTSPERSOON</A></SMALL>
+      <BR><SMALL><A href="#UI_SBICODE_MAATSCH_ACTIVITEIT">2.27 - UI_SBICODE_MAATSCH_ACTIVITEIT</A></SMALL>
+      <BR><SMALL><A href="#UI_SBICODE_ONDERNEMING">2.28 - UI_SBICODE_ONDERNEMING</A></SMALL>
+      <BR><SMALL><A href="#UI_SBICODE_RECHTSPERSOON">2.29 - UI_SBICODE_RECHTSPERSOON</A></SMALL>
+      <BR><SMALL><A href="#UI_SBICODE_VESTIGING">2.30 - UI_SBICODE_VESTIGING</A></SMALL>
+      <BR><SMALL><A href="#UI_VEST_HANDELSNAAM_RELATIE">2.31 - UI_VEST_HANDELSNAAM_RELATIE</A></SMALL>
+      <BR><SMALL><A href="#UI_VESTIGING">2.32 - UI_VESTIGING</A></SMALL>
+      <BR><A href="#Views">3 - Views</A>
+      <BR><A href="#Procedures">4 - Procedures</A>
+      <BR><A href="#Functions">5 - Functions</A>
+      <BR><A href="#Packages">6 - Packages</A>
+      <BR><A href="#Sequences">7 - Sequences</A>
+      <BR><A href="#Synonyms">8 - Synonyms</A>
+      <BR><A href="#Grants_received">9 - Grants received</A>
+      <BR><SMALL><A href="#SYS_grants_received">9.1 - SYS grants</A></SMALL>
+      <BR><SMALL><A href="#Object_grants_received">9.2 - Grants on user objects</A></SMALL>
+    <H1><A name="Tabellen"></A>2 - Tabellen</H1><HR>
+      <H2><A name="UI_ACTIVITEITEN"></A>2.1 - UI_ACTIVITEITEN</H2>
+      Activiteiten van de KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_ACTIVITEITEN</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UACT</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De activiteit(en) van een KvK inschrijving.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ACTIVITEIT_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING</TD><TD>VARCHAR2(2000 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CODE_HERKOMST</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ACTIVITEIT_ID</TD><TD>Dit is een gegenereerde steutel</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Deze key is extra opgenomen en verwijst naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING</TD><TD>De omschrijving van de activiteit</TD></TR>
+          <TR class="even"><TD>CODE_HERKOMST</TD><TD>Code die aangeeft wat de herkomst is van dit record</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UACT_PK(ACTIVITEIT_ID,KVK_NUMMER)</CODE>
+      <H2><A name="UI_BIJZONDERE_RECHTSTOESTAND"></A>2.2 - UI_BIJZONDERE_RECHTSTOESTAND</H2>
+      De bijzondere rechtstoestanden van bepaalde KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_BIJZONDERE_RECHTSTOESTAND</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UBRT</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Een bijzondere rechtstoestand van een KvK inschrijving.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>CODE_BIJZ_RECHTSTOESTAND</TD><TD>VARCHAR2(5 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>OMSCHR_BIJZ_RECHTSTOESTAND</TD><TD>VARCHAR2(50 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PERSOON_ID</TD><TD>Verwijzende sleutel naar persoon</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Deze key is extra opgenomen en verwijst naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="odd"><TD>CODE_BIJZ_RECHTSTOESTAND</TD><TD>Heeft de waarde: FAIL, SURS of SSAN</TD></TR>
+          <TR class="even"><TD>OMSCHR_BIJZ_RECHTSTOESTAND</TD><TD>Heeft de waarde: Faillissement, Surseance van betaling of Schuldsanering</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UBRT_PK(PERSOON_ID)</CODE>
+      <H2><A name="UI_BINNENLANDS_ADRES"></A>2.3 - UI_BINNENLANDS_ADRES</H2>
+      Binnenlandse adressen horende bij KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_BINNENLANDS_ADRES</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UBIA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Een adres heeft geen HIS_TS_IN en HIS_TS_END. Als het adres wijzigt wordt er een nieuwe adres regel aangemaakt en gekoppeld aan de locatie, die wel een bijgewerkte tijdlijn krijgt. Dus adres wordt dan gekoppeld aan de nieuwe regel van locatie.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADRES_BIN_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>CODE_AAND_BIJ_HUISNUMMER</TD><TD>VARCHAR2(40 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AANDUIDING_BIJ_HUISNUMMER</TD><TD>VARCHAR2(40 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HUISNUMMER</TD><TD>NUMBER(5,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HUISLETTER</TD><TD>VARCHAR2(1 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HUISNUMMER_TOEVOEGING</TD><TD>VARCHAR2(10 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>VARCHAR2(7 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>PLAATS</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>POSTBUSNUMMER</TD><TD>NUMBER(5,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HASH_WAARDE</TD><TD>RAWundef</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADRES_BIN_ID</TD><TD>Dit is een unieke, door Oracle, gegenereerde sleutel</TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>De straat van het adres</TD></TR>
+          <TR class="odd"><TD>CODE_AAND_BIJ_HUISNUMMER</TD><TD>Code van de aanduiding bij het huisnummer</TD></TR>
+          <TR class="even"><TD>AANDUIDING_BIJ_HUISNUMMER</TD><TD>De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen. Mogelijke waarden zijn o.a.: bij, tegenover</TD></TR>
+          <TR class="odd"><TD>HUISNUMMER</TD><TD>Het huisnummer van het adres</TD></TR>
+          <TR class="even"><TD>HUISLETTER</TD><TD>De huisletter die door gemeente is toegekend aan het huisnummer</TD></TR>
+          <TR class="odd"><TD>HUISNUMMER_TOEVOEGING</TD><TD>Een toevoeging van het adres bijvoorbeeld rood, bis, etc.</TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>De in Nederland gangbare postcode voor een Nederlands postadres, bestaande uit een numeriek deel en een alfabetisch deel.</TD></TR>
+          <TR class="odd"><TD>PLAATS</TD><TD>De plaatsaanduiding van het adres. Dit komt overeen met het gemeentedeel in de basisregistratie personen (BRP).</TD></TR>
+          <TR class="even"><TD>POSTBUSNUMMER</TD><TD>postbusnummer</TD></TR>
+          <TR class="odd"><TD>HASH_WAARDE</TD><TD>Hash waarde van de KvK adres kolommen (hiermee voorkomen we een full table scan)</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UBIA_PK(ADRES_BIN_ID)</CODE>
+      <BR>Trigger <CODE>UIBIA_BIR_TRG</CODE> type <CODE>BEFORE EACH ROW</CODE> event <CODE>INSERT</CODE>
+      <H2><A name="UI_BUITENLANDS_ADRES"></A>2.4 - UI_BUITENLANDS_ADRES</H2>
+      Buitenlandse adressen horende bij KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_BUITENLANDS_ADRES</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UBUA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Een adres heeft geen HIS_TS_IN en HIS_TS_END. Als het adres wijzigt wordt er een nieuwe adres regel aangemaakt en gekoppeld aan de locatie, die wel een bijgewerkte tijdlijn krijgt. Dus adres wordt dan gekoppeld aan de nieuwe regel van locatie.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADRES_BUIT_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAAT_HUISNUMMER</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTCODE_WOONPLAATS</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGIO</TD><TD>VARCHAR2(150 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LAND_CODE</TD><TD>NUMBER(4,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LAND_OMSCHRIJVING</TD><TD>VARCHAR2(40 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HASH_WAARDE</TD><TD>RAWundef</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADRES_BUIT_ID</TD><TD>Dit is een unieke, door Oracle, gegenereerde sleutel</TD></TR>
+          <TR class="even"><TD>STRAAT_HUISNUMMER</TD><TD>Het straat/huisnummer is een combinatie van de de straat en huisnummer</TD></TR>
+          <TR class="odd"><TD>POSTCODE_WOONPLAATS</TD><TD>De postcode/woonplaats is de combinatie van een eventuele postcode en woonplaats</TD></TR>
+          <TR class="even"><TD>REGIO</TD><TD>Regio is een deel van het land (streek, provincie, etc.)</TD></TR>
+          <TR class="odd"><TD>LAND_CODE</TD><TD>Code: De naam van het land waar het adres zich bevindt.</TD></TR>
+          <TR class="even"><TD>LAND_OMSCHRIJVING</TD><TD>Omschrijving: De naam van het land waar het adres zich bevindt.</TD></TR>
+          <TR class="odd"><TD>HASH_WAARDE</TD><TD>Hash waarde van de KvK adres kolommen (hiermee voorkomen we een full table scan)</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UBUA_PK(ADRES_BUIT_ID)</CODE>
+      <BR>Trigger <CODE>UIBUA_BIR_TRG</CODE> type <CODE>BEFORE EACH ROW</CODE> event <CODE>INSERT</CODE>
+      <H2><A name="UI_BUITENLANDSE_VENNOOTSCHAP"></A>2.5 - UI_BUITENLANDSE_VENNOOTSCHAP</H2>
+      De gegevens die specifiek zijn voor de buitenlandse vennootschappen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_BUITENLANDSE_VENNOOTSCHAP</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UBVN</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Een vennootschap die in het buitenland gevestigd is.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BUITENLANDSEVENNOOTSCHAP_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORMCATEGORIE</TD><TD>VARCHAR2(4 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHR_RECHTSVORMCATEGORIE</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BUITENLANDSEVENNOOTSCHAP_ID</TD><TD>PK - Het ID van deze tabel uit sequence UHRIMP.UI_BUITENL_VENNOOTSCH_SEQ</TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>Het door een kamer toegekend uniek nummer voor de NietNatuurlijkPersoon.</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Deze key is extra opgenomen en verwijst naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORMCATEGORIE</TD><TD>Code: De Nederlandse rechtsvormcategorie van de BuitenlandseVennootschap.</TD></TR>
+          <TR class="odd"><TD>OMSCHR_RECHTSVORMCATEGORIE</TD><TD>Omschrijving: De Nederlandse rechtsvormcategorie van de BuitenlandseVennootschap.</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UBVN_PK(BUITENLANDSEVENNOOTSCHAP_ID)</CODE>
+      <H2><A name="UI_CODE_SBICODE"></A>2.6 - UI_CODE_SBICODE</H2>
+      Domeintabel voor de SBI codes.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_CODE_SBICODE</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCSC</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>VARCHAR2(10 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>OMSCHRIJVING_SBICODE</TD><TD>VARCHAR2(300 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEFINITIEJAAR</TD><TD>NUMBER(4,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>Code: De codering van de activiteit conform de SBI 2008.</TD></TR>
+          <TR class="even"><TD>OMSCHRIJVING_SBICODE</TD><TD>Omschrijving: De codering van de activiteit conform de SBI 2008.</TD></TR>
+          <TR class="odd"><TD>DEFINITIEJAAR</TD><TD>[2008,2025] Het jaar waarin de SBICODE gedefinieerd is - betekenis van dezelfde SBICODE kan anders zijn in een ander DEFINITIEJAAR.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCSC_PK(SBICODE,DEFINITIEJAAR)</CODE>
+      <H2><A name="UI_COMMUN_GEGEVENS_MAATSCH_ACT"></A>2.7 - UI_COMMUN_GEGEVENS_MAATSCH_ACT</H2>
+      Koppeltabel tussen UI_COMMUNICATIEGEGEVES en UI_MAATSCHAPPELIJKE_ACTIVITEIT.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_COMMUN_GEGEVENS_MAATSCH_ACT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCMA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De communicatiegegevens op het niveau van de maatschappelijke activiteit.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>PK. FK naar UI_COMMUNICATIEGEGEVENS.</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>PK. FK naar UI_MAATSCHAPPELIJKE_ACTIVITEIT.</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCMA_PK(COMMUNICATIEGEGEVEN_ID,KVK_NUMMER)</CODE>
+      <H2><A name="UI_COMMUN_GEGEVENS_RECHTSPERS"></A>2.8 - UI_COMMUN_GEGEVENS_RECHTSPERS</H2>
+      Koppeltabel tussen UI_COMMUNICATIEGEGEVES en UI_RECHTSPERSOON.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_COMMUN_GEGEVENS_RECHTSPERS</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCRP</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De communicatiegegevens op het niveau van de rechtspersoon.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RECHTSPERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>PK. FK naar UI_COMMUNICATIEGEGEVENS.</TD></TR>
+          <TR class="even"><TD>RECHTSPERSOON_ID</TD><TD>PK. FK naar UI_RECHTSPERSOON.</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>KVK_NUMMER van deze inschrijving.</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCRP_PK(COMMUNICATIEGEGEVEN_ID,RECHTSPERSOON_ID)</CODE>
+      <H2><A name="UI_COMMUN_GEGEVENS_VESTIGING"></A>2.9 - UI_COMMUN_GEGEVENS_VESTIGING</H2>
+      Koppeltabel tussen UI_COMMUNICATIEGEGEVES en UI_VESTIGING.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_COMMUN_GEGEVENS_VESTIGING</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCGV</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De communicatiegegevens op het niveau van de vestigingen.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>PK. FK naar UI_COMMUNICATIEGEGEVENS.</TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>PK. FK naar UI_VESTIGING.</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>PK. FK naar UI_VESTIGING.</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCGV_PK(COMMUNICATIEGEGEVEN_ID,VESTIGINGS_NUMMER,KVK_NUMMER)</CODE>
+      <H2><A name="UI_COMMUNICATIEGEGEVENS"></A>2.10 - UI_COMMUNICATIEGEGEVENS</H2>
+      Communicatiegegevens van een inschrijving.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_COMMUNICATIEGEGEVENS</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCG</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLESS tabel --> De communicatiegegevens (telefoonnummer/emailadres/URL) van een KvK inschrijving.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>TOEGANGSCODE</TD><TD>VARCHAR2(5 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>EMAILADRES</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DOMEINNAAM</TD><TD>VARCHAR2(320 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>COMMUNICATIEGEGEVEN_TYPE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>NUMMER</TD><TD>VARCHAR2(15 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>COMMUNICATIEGEGEVEN_ID</TD><TD>PK. ID van het communicatiegegeven.</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>FK naar UH_MAATSCHAPPELIJKE_ACTIVITEIT.</TD></TR>
+          <TR class="odd"><TD>TOEGANGSCODE</TD><TD>Toegangscode deel van een telefoonnummer.</TD></TR>
+          <TR class="even"><TD>EMAILADRES</TD><TD>Emailadres.</TD></TR>
+          <TR class="odd"><TD>DOMEINNAAM</TD><TD>Domeinnaam (URL).</TD></TR>
+          <TR class="even"><TD>COMMUNICATIEGEGEVEN_TYPE</TD><TD>FK naar ui_CODE_COMMUNICATIEGEGEVENS.</TD></TR>
+          <TR class="odd"><TD>NUMMER</TD><TD>Nummer deel van een telefoonnummer.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCG_PK(COMMUNICATIEGEGEVEN_ID)</CODE>
+      <BR>Foreign key constraint <CODE>UCG_UCCG_FK(COMMUNICATIEGEGEVEN_TYPE)</CODE> references constraint <CODE>UHRCORE.UCCG_PK</CODE>
+      <H2><A name="UI_COMM_VESTIGINGRELATIE"></A>2.11 - UI_COMM_VESTIGINGRELATIE</H2>
+      De commerciële vestiging van een relatie
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_COMM_VESTIGINGRELATIE</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCVR</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Legt een registratie vast tussen de vestiging en maatschappelijke activiteit. Hiermee wordt vastgelegd in welke periode (datumAanvang-datumEinde) de {CommercieleVestiging} bij een
+{Onderneming} behoort.</TD></TR>
+
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Is een verwijzende sleutel naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>Is een verwijzende sleutel naar UI_vestiging</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCVR_PK(KVK_NUMMER,VESTIGINGS_NUMMER)</CODE>
+      <H2><A name="UI_HANDELSNAAM"></A>2.12 - UI_HANDELSNAAM</H2>
+      De handelsnamen van de KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_HANDELSNAAM</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UHN</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De handelsnaam / handelsnamen van een KvK inschrijving. Bevat de handelsnamen van de onderneming en die van de vestigingen - deze kunnen identiek zijn.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>HANDELSNAAM_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HANDELSNAAM</TD><TD>VARCHAR2(625 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>HANDELSNAAM_ID</TD><TD>Dit is een unieke, door Oracle, gegenereerde sleutel</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Dit is de verwijzende sleutel naar UI_Maatschappelijke_Activiteit</TD></TR>
+          <TR class="odd"><TD>HANDELSNAAM</TD><TD>De Handelsnaam van de vestiging/onderneming waaronder gehandeld wordt</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UHN_PK(HANDELSNAAM_ID)</CODE>
+      <H2><A name="UI_LOCATIE"></A>2.13 - UI_LOCATIE</H2>
+      Locatie gegevens horende bij KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_LOCATIE</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">ULOC</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Een Locatie is een aanwijsbare plek op aarde.
+
+Adresgegevens zijn alleen authentiek indien het een woonadres betreft van een NatuurlijkPersoon en de NatuurlijkPersoon eigenaar is van een eenmanszaak of deelneemt aan een Samenwerkingsverband of het een bezoekadres of postadres van een Vestiging betreft.Een Locatie kan ook een aaneengesloten reeks van
+huisnummers beslaan, in dat geval wordt er tevens een volledig "tot en met" adres opgenomen met het hoogste huisnummer in de reeks.
+
+Een locatie kan aan meerdere andere tabellen gekoppeld worden. Dit wordt bepaald aan de hand van de XML die wordt ontvangen van de KvK. In de XML staan meerdere adressen, van alle adressen die identiek zijn wordt één locatie met bijbehorende adres regel gemaakt.</TD></TR>
+
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>IND_AFGESCHERMD</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ADRES_BIN_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ADRES_BUIT_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>LOCATIE_ID</TD><TD>Dit is een unieke, door Oracle, gegenereerde sleutel</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Dit is de verwijzende sleutel naar UI_Maatschappelijke_Activiteit</TD></TR>
+          <TR class="odd"><TD>IND_AFGESCHERMD</TD><TD>Geeft aan of het adres afgeschermd is of niet.</TD></TR>
+          <TR class="even"><TD>ADRES_BIN_ID</TD><TD>Dit is de verwijzende sleutel naar UI_Binnenlands_Adres</TD></TR>
+          <TR class="odd"><TD>ADRES_BUIT_ID</TD><TD>Dit is de verwijzende sleutel naar UI_Buitenlands_Adres</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>ULOC_PK(LOCATIE_ID)</CODE>
+      <H2><A name="UI_LOCATIE_BUITENL_VENNOOTSCH"></A>2.14 - UI_LOCATIE_BUITENL_VENNOOTSCH</H2>
+      Koppeltabel tussen UI_BUITENL_VENNOOTSCHAP en UI_LOCATIE
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_LOCATIE_BUITENL_VENNOOTSCH</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">ULBV</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Koppeltabel tussen UH_BUITENL_VENNOOTSCHAP en UH_LOCATIE</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BUITENLANDSEVENNOOTSCHAP_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BUITENLANDSEVENNOOTSCHAP_ID</TD><TD>FK naar UI_BUITENLANDSEVENNOOTSCHAP</TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>FK naar UI_LOCATIE</TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>['B','P'] Soort locatie (bezoek / post)</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>FK naar UI_MAATSCH_ACTIVITEIT</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>ULBV_PK(BUITENLANDSEVENNOOTSCHAP_ID,LOCATIE_ID,LOCATIE_TYPE)</CODE>
+      <H2><A name="UI_LOCATIE_MAATSCH_ACTIVITEIT"></A>2.15 - UI_LOCATIE_MAATSCH_ACTIVITEIT</H2>
+      Koppeltabel tussen UI_MAATSCHAPPELIJKE_ACTIVITEIT en UI_LOCATIE
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_LOCATIE_MAATSCH_ACTIVITEIT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">ULMA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Koppeltabel tussen UH_MAATSCHAPPELIJKE_ACTIVITEIT en UH_LOCATIE</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>FK naar UI_MAATSCH_ACTIVITEIT</TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>FK naar UI_LOCATIE</TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>['B','P'] Soort locatie (bezoek / post)</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>ULMA_PK(KVK_NUMMER,LOCATIE_ID,LOCATIE_TYPE)</CODE>
+      <H2><A name="UI_LOCATIE_PERSOON"></A>2.16 - UI_LOCATIE_PERSOON</H2>
+      Koppeltabel tussen UI_PERSOON en UI_LOCATIE
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_LOCATIE_PERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">ULP</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Koppeltabel tussen UH_PERSOON en UH_LOCATIE</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PERSOON_ID</TD><TD>FK naar UI_PERSOON</TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>FK naar UI_LOCATIE</TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>['B','P'] Soort locatie (bezoek / post)</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>FK naar UI_MAATSCH_ACTIVITEIT</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>ULP_PK(PERSOON_ID,LOCATIE_ID,LOCATIE_TYPE)</CODE>
+      <H2><A name="UI_LOCATIE_RECHTSPERSOON"></A>2.17 - UI_LOCATIE_RECHTSPERSOON</H2>
+      Koppeltabel tussen UI_RECHTSPERSOON en UI_LOCATIE
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_LOCATIE_RECHTSPERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">ULRP</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Koppeltabel tussen UH_RECHTSPERSOON en UH_LOCATIE</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>RECHTSPERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>RECHTSPERSOON_ID</TD><TD>FK naar UI_RECHTSPERSOON</TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>FK naar UI_LOCATIE</TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>['B','P'] Soort locatie (bezoek / post)</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>FK naar UI_MAATSCH_ACTIVITEIT</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>ULRP_PK(RECHTSPERSOON_ID,LOCATIE_ID,LOCATIE_TYPE)</CODE>
+      <H2><A name="UI_LOCATIE_VESTIGING"></A>2.18 - UI_LOCATIE_VESTIGING</H2>
+      Koppeltabel tussen UI_VESTIGING en UI_LOCATIE
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_LOCATIE_VESTIGING</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">ULV</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Koppeltabel tussen UH_VESTIGING en UH_LOCATIE</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VESTIGINGS_NUMMER</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VESTIGINGS_NUMMER</TD><TD>FK naar UI_VESTIGING</TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>FK naar UI_LOCATIE</TD></TR>
+          <TR class="odd"><TD>LOCATIE_TYPE</TD><TD>['B','P'] Soort locatie (bezoek / post)</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>FK naar UI_MAATSCH_ACTIVITEIT</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>ULV_PK(VESTIGINGS_NUMMER,LOCATIE_ID,LOCATIE_TYPE)</CODE>
+      <H2><A name="UI_MAATSCHAPPELIJKE_ACTIVITEIT"></A>2.19 - UI_MAATSCHAPPELIJKE_ACTIVITEIT</H2>
+      Maatschappelijke activiteiten horende bij KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_MAATSCHAPPELIJKE_ACTIVITEIT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UMA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Een Maatschappelijke Activiteit is de activiteit van een Natuurlijk persoon of Niet-natuurlijk persoon.
+Toelichting:
+De Maatschappelijke Activiteit is het totaal van alle activiteiten uitgeoefend door een Natuurlijk Persoon of een Niet-natuurlijk Persoon. Een Maatschappelijke Activiteit kan ook als Onderneming voorkomen.
+</TD></TR>
+
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>NONMAILINGCODE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>NAAM</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Betreft het identificerende gegeven voor de MaatschappelijkeActiviteit, het KvK-nummer</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+          <TR class="odd"><TD>NONMAILINGCODE</TD><TD>Indicatie ???</TD></TR>
+          <TR class="even"><TD>NAAM</TD><TD>Naam van de maatschappelijke activiteit</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UMA_PK(KVK_NUMMER)</CODE>
+      <H2><A name="UI_NAAMPERSOON"></A>2.20 - UI_NAAMPERSOON</H2>
+      De namen van de personen die KvK inschrijvingen hebben
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_NAAMPERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UNPS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Gegevens die specifiek zijn voor een naampersoon.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>NAAM_PERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>NAAM</TD><TD>VARCHAR2(300 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>NAAM_PERSOON_ID</TD><TD>Verwijzende sleutel naar persoon</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Deze key is extra opgenomen en verwijst naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="odd"><TD>NAAM</TD><TD>Naam van de persoon</TD></TR>
+          <TR class="even"><TD>LOCATIE_ID</TD><TD>De verwijzende sleutel van locatie naar UI_locatie</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UNPS_PK(NAAM_PERSOON_ID)</CODE>
+      <H2><A name="UI_NATUURLIJKPERSOON"></A>2.21 - UI_NATUURLIJKPERSOON</H2>
+      De gegevens die specificiek zijn voor alleen de natuurlijkpersonen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_NATUURLIJKPERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UNA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Gegevens die specifiek zijn voor een natuurlijke persoon.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>NATUURLIJKEPERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VOORNAMEN</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>GESLACHTSNAAM</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ACHTERNAAM</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>VOORVOEGSEL_GESLACHTSNAAM</TD><TD>VARCHAR2(10 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VOORVOEGSEL</TD><TD>VARCHAR2(10 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>GEBOORTEDATUM</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>OVERLIJDENSDATUM</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>GEBOORTEPLAATS</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CODE_GEBOORTELAND</TD><TD>NUMBER(4,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_GEBOORTELAND</TD><TD>VARCHAR2(40 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>NATIONALITEIT</TD><TD>VARCHAR2(40 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>AANDUIDINGNAAMGEBRUIK</TD><TD>CHAR(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>GESLACHTSNAAMPARTNER</TD><TD>VARCHAR2(200 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>VOORV_GESLACHTSNM_PARTNER</TD><TD>VARCHAR2(10 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WOON_LOCATIE_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORM</TD><TD>VARCHAR2(4 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_RECHTSVORM</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>NATUURLIJKEPERSOON_ID</TD><TD>ID van dit record uit sequence UHRIMP.UI_NATUUURLIJKEPERSOON_SEQ</TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>het burgerservicenummer (BSN) van een natuurlijk persoon</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Deze key is extra opgenomen en verwijst naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="even"><TD>VOORNAMEN</TD><TD>Voornaam of voornamen van de NatuurlijkPersoon.</TD></TR>
+          <TR class="odd"><TD>GESLACHTSNAAM</TD><TD>De geslachtsnaam van de NatuurlijkPersoon.</TD></TR>
+          <TR class="even"><TD>ACHTERNAAM</TD><TD>Achternaam van de NatuurlijkPersoon.</TD></TR>
+          <TR class="odd"><TD>VOORVOEGSEL_GESLACHTSNAAM</TD><TD>De eventuele voorvoegsels van de geslachtsnaam van de NatuurlijkPersoon</TD></TR>
+          <TR class="even"><TD>VOORVOEGSEL</TD><TD>De eventuele voorvoegsels van de naam van de NatuurlijkPersoon</TD></TR>
+          <TR class="odd"><TD>GEBOORTEDATUM</TD><TD>Geboortedatum van de NatuurlijkPersoon.</TD></TR>
+          <TR class="even"><TD>OVERLIJDENSDATUM</TD><TD>De overlijdensdatum van de NatuurlijkPersoon</TD></TR>
+          <TR class="odd"><TD>GEBOORTEPLAATS</TD><TD>De plaats waar de betreffende NatuurlijkPersoon is geboren</TD></TR>
+          <TR class="even"><TD>CODE_GEBOORTELAND</TD><TD>Code: Het land waar de NatuurlijkPersoon geboren is.</TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_GEBOORTELAND</TD><TD>Omschrijving: Het land waar de NatuurlijkPersoon geboren is.</TD></TR>
+          <TR class="even"><TD>NATIONALITEIT</TD><TD>Nationaliteit van de natuurlijke persoon</TD></TR>
+          <TR class="odd"><TD>AANDUIDINGNAAMGEBRUIK</TD><TD>Gegevens over de wijze van aanschrijving.</TD></TR>
+          <TR class="even"><TD>GESLACHTSNAAMPARTNER</TD><TD>Is gevuld indien aanduiding naamgebruik ongelijk is aan "Eigen geslachtsnaam"</TD></TR>
+          <TR class="odd"><TD>VOORV_GESLACHTSNM_PARTNER</TD><TD>De voorvoegsels van de geslachtsnaam van de partner. Wordt gebruikt bij de opbouw van de naam (afhankelijk van het naamgebruik).</TD></TR>
+          <TR class="even"><TD>WOON_LOCATIE_ID</TD><TD>FK naar UHRIMP.UI_LOCATIE.LOCATIE_ID.</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORM</TD><TD>Code: Rechtsvorm</TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_RECHTSVORM</TD><TD>Omschrijving: Rechtsvorm</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UNAP_PK(NATUURLIJKEPERSOON_ID)</CODE>
+      <H2><A name="UI_NIET_COMM_VESTIGINGRELATIE"></A>2.22 - UI_NIET_COMM_VESTIGINGRELATIE</H2>
+      De niet-commerciële vestiging van een relatie
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_NIET_COMM_VESTIGINGRELATIE</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UNCR</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Hiermee wordt beschreven in welke periode (datumAanvang-datumEinde) de {NietCommercieleVestiging} bij een {MaatschappelijkeActiviteit} behoort.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Is een verwijzende sleutel naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>Is een verwijzende sleutel naar UI_vestiging</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UNCR_PK(KVK_NUMMER,VESTIGINGS_NUMMER)</CODE>
+      <H2><A name="UI_ONDERNEMING"></A>2.23 - UI_ONDERNEMING</H2>
+      Ondernemingen horende bij KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_ONDERNEMING</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UON</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Gegevens van een onderneming.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>VOLTIJD_WERKZAME_PERSONEN</TD><TD>NUMBER(6,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEELTIJD_WERKZAME_PERSONEN</TD><TD>NUMBER(6,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>TOTAAL_WERKZAME_PERSONEN</TD><TD>NUMBER(6,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Dit is de verwijzende sleutel naar UI_Maatschappelijke_Activiteit</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+          <TR class="odd"><TD>VOLTIJD_WERKZAME_PERSONEN</TD><TD>Aantal medewerkers met een voltijd aanstelling</TD></TR>
+          <TR class="even"><TD>DEELTIJD_WERKZAME_PERSONEN</TD><TD>Aantal medewerkers met een deeltijd aanstelling</TD></TR>
+          <TR class="odd"><TD>TOTAAL_WERKZAME_PERSONEN</TD><TD>Aantal medewerkers totaal</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UON_PK(KVK_NUMMER)</CODE>
+      <H2><A name="UI_ONDERN_HANDELSNAAM_RELATIE"></A>2.24 - UI_ONDERN_HANDELSNAAM_RELATIE</H2>
+      De ondernemings handelsnaam relatie
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_ONDERN_HANDELSNAAM_RELATIE</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UOHR</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Hiermee wordt vastgelegd in welke periode (datumAanvang tot (eventueel) datumEinde) de Handelsnaam door de Onderneming is gevoerd, en de volgorde van de handelsnaam bij de Onderneming.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HANDELSNAAM_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VOLGORDE</TD><TD>NUMBER(4,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Dit is de verwijzende sleutel naar UI_Onderneming</TD></TR>
+          <TR class="even"><TD>HANDELSNAAM_ID</TD><TD>Dit is de verwijzende sleutel naar UI_handelsnaam</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+          <TR class="even"><TD>VOLGORDE</TD><TD>De volgorde waarop de handelsnamen worden getoond bij de onderneming.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UOHR_PK(KVK_NUMMER,HANDELSNAAM_ID,VOLGORDE)</CODE>
+      <H2><A name="UI_PERSOON"></A>2.25 - UI_PERSOON</H2>
+      De gegevens die natuurlijke en niet-natuurlijke personen gemeen hebben
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_PERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UPER</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> UH_PERSOON is de tabel waar alle personen (in de juridische betekenis) in worden geregistreerd en hangt boven de eventuele overige personen tabellen. </TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>TYPE_PERSOON</TD><TD>VARCHAR2(32 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RECHTSPERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>NATUURLIJKEPERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BUITENLANDSEVENNOOTSCHAP_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>NAAM_PERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORM</TD><TD>VARCHAR2(4 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_RECHTSVORM</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>PERSOONRECHTSVORM</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>VOLLEDIGENAAM</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PERSOON_ID</TD><TD>Dit is een gegenereerde sleutel</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Deze key is extra opgenomen en verwijst naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="odd"><TD>TYPE_PERSOON</TD><TD>Geeft aan welk type persoon het is; rechtspersoon, natuurlijkPersoon, naamPersoon, buitenlandseVennootschap, samenwerkingsverband, eenmanszaakMetMeerdereEigenaren, rechtspersoonInOprichting.</TD></TR>
+          <TR class="even"><TD>RECHTSPERSOON_ID</TD><TD>FK naar UHRIMP.UI_RECHTSPERSOON.RECHTSPERSOON_ID</TD></TR>
+          <TR class="odd"><TD>NATUURLIJKEPERSOON_ID</TD><TD>FK naar UHRIMP.UI_NATUURLIJKPERSOON.NATUURLIJKEPERSOON_ID</TD></TR>
+          <TR class="even"><TD>BUITENLANDSEVENNOOTSCHAP_ID</TD><TD>FK naar UHRIMP.UI_BUITENLANDSE_VENNOOTSCHAP.BUITENLANDSEVENNOOTSCHAP_ID</TD></TR>
+          <TR class="odd"><TD>NAAM_PERSOON_ID</TD><TD>FK naar UHRIMP.UI_NAAMPERSOON.NAAM_PERSOON_ID</TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>Ingevuld als het een rechtspersoon(Binnenlands) of buitenlandseVennootschap is</TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>Ingevuld als het een natuurlijk persoon is</TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORM</TD><TD>Code: Rechtsvorm</TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_RECHTSVORM</TD><TD>Omschrijving: Rechtsvorm</TD></TR>
+          <TR class="even"><TD>PERSOONRECHTSVORM</TD><TD>Dit is de rechtsvorm die door de KvK is afgeleid/samengesteld uit onderliggende tabellen.</TD></TR>
+          <TR class="odd"><TD>VOLLEDIGENAAM</TD><TD>Dit is de volledige naam die door de KvK is afgeleid/samengesteld uit onderliggende tabellen.</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UPER_PK(PERSOON_ID)</CODE>
+      <H2><A name="UI_RECHTSPERSOON"></A>2.26 - UI_RECHTSPERSOON</H2>
+      De gegevens die specifiek zijn voor alleen de rechtspersonen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_RECHTSPERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">URP</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Gegevens die specifiek zijn voor een rechtspersoon.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>RECHTSPERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATUTAIREZETEL</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>AANVANG_STATUTAIRE_ZETEL</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORM</TD><TD>VARCHAR2(4 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_RECHTSVORM</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ACTIVITEIT_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>RECHTSPERSOON_ID</TD><TD>ID van deze tabel uit sequence UHRIMP.UI_RECHTSPERSOON_SEQ</TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>Het door een kamer toegekend uniek nummer voor de NietNatuurlijkPersoon.</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Deze key is extra opgenomen en verwijst naar UI_MaatschappelijkeActiviteit</TD></TR>
+          <TR class="even"><TD>STATUTAIREZETEL</TD><TD>De zetel is de plaats waar een Rechtspersoon volgens de statuten gevestigd is.</TD></TR>
+          <TR class="odd"><TD>AANVANG_STATUTAIRE_ZETEL</TD><TD>Aanvangsdatum van de statutaire zetel</TD></TR>
+          <TR class="even"><TD>CODE_RECHTSVORM</TD><TD>Code: Rechtsvorm</TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING_RECHTSVORM</TD><TD>Omschrijving: Rechtsvorm</TD></TR>
+          <TR class="even"><TD>ACTIVITEIT_ID</TD><TD>Deze key verwijst naar UI_activiteiten</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>URP_PK(RECHTSPERSOON_ID)</CODE>
+      <H2><A name="UI_SBICODE_MAATSCH_ACTIVITEIT"></A>2.27 - UI_SBICODE_MAATSCH_ACTIVITEIT</H2>
+      Koppeltabel tussen UH_SBICODE en UI_MAATSCHPPELIJKE_ACTIVITEIT.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_SBICODE_MAATSCH_ACTIVITEIT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">USMA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De SBI codes die op het niveau van de maatschappelijke activiteit geregistreerd zijn.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ISHOOFDACTIVITEIT</TD><TD>VARCHAR2(1 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEFINITIEJAAR</TD><TD>NUMBER(4,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>PK + FK naar UH_CODE_SBICODE.</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>PK + FK naar UI_MAATSCHAPPELIJKE_ACTIVITEIT.</TD></TR>
+          <TR class="odd"><TD>ISHOOFDACTIVITEIT</TD><TD>Indicatie of dit de/een hoofdactiviteit is voor de maatschappelijke activiteit.</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip waarop de gebeurtenis is geregistreerd bij de Kamer van Koophandel.</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd.</TD></TR>
+          <TR class="odd"><TD>DEFINITIEJAAR</TD><TD>[2008,2025] Het jaar waarin de SBICODE gedefinieerd is - betekenis van dezelfde SBICODE kan anders zijn in een ander DEFINITIEJAAR.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>USMA_PK(SBICODE,DEFINITIEJAAR,KVK_NUMMER)</CODE>
+      <H2><A name="UI_SBICODE_ONDERNEMING"></A>2.28 - UI_SBICODE_ONDERNEMING</H2>
+      Koppeltabel tussen UH_CODE_SBICODE en UH_ONDERNEMING.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_SBICODE_ONDERNEMING</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">USO</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De SBI codes die op het niveau van de onderneming geregistreerd zijn.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ISHOOFDACTIVITEIT</TD><TD>VARCHAR2(1 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEFINITIEJAAR</TD><TD>NUMBER(4,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>PK + FK naar UH_CODE_SBICODE.</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>PK + FK naar UI_ONDERNEMING.</TD></TR>
+          <TR class="odd"><TD>ISHOOFDACTIVITEIT</TD><TD>Indicatie of dit de/een hoofdactiviteit is voor de onderneming.</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip waarop de gebeurtenis is geregistreerd bij de Kamer van Koophandel.</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd.</TD></TR>
+          <TR class="odd"><TD>DEFINITIEJAAR</TD><TD>[2008,2025] Het jaar waarin de SBICODE gedefinieerd is - betekenis van dezelfde SBICODE kan anders zijn in een ander DEFINITIEJAAR.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>USO_PK(SBICODE,DEFINITIEJAAR,KVK_NUMMER)</CODE>
+      <H2><A name="UI_SBICODE_RECHTSPERSOON"></A>2.29 - UI_SBICODE_RECHTSPERSOON</H2>
+      Koppeltabel tussen UH_CODE_SBICODE en UI_RECHTSPERSOON.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_SBICODE_RECHTSPERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">USRP</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De SBI codes die op het niveau van de rechtspersoon geregistreerd zijn.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RECHTSPERSOON_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ISHOOFDACTIVITEIT</TD><TD>VARCHAR2(1 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEFINITIEJAAR</TD><TD>NUMBER(4,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>PK + FK naar UH_CODE_SBICODE.</TD></TR>
+          <TR class="even"><TD>RECHTSPERSOON_ID</TD><TD>PK + FK naar UH_RECHTSPERSOON</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>KVK_NUMMER van de registratie.</TD></TR>
+          <TR class="even"><TD>ISHOOFDACTIVITEIT</TD><TD>Indicatie of dit de/een hoofdactiviteit is voor de rechtspersoon.</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip waarop de gebeurtenis is geregistreerd bij de Kamer van Koophandel.</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd.</TD></TR>
+          <TR class="even"><TD>DEFINITIEJAAR</TD><TD>[2008,2025] Het jaar waarin de SBICODE gedefinieerd is - betekenis van dezelfde SBICODE kan anders zijn in een ander DEFINITIEJAAR.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>USRP_PK(SBICODE,DEFINITIEJAAR,KVK_NUMMER)</CODE>
+      <H2><A name="UI_SBICODE_VESTIGING"></A>2.30 - UI_SBICODE_VESTIGING</H2>
+      Koppeltabel tussen UH_SBICODE en UI_VESTIGING.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_SBICODE_VESTIGING</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">USV</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> De SBI codes die op het niveau van een vestiging geregistreerd zijn.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ISHOOFDACTIVITEIT</TD><TD>VARCHAR2(1 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEFINITIEJAAR</TD><TD>NUMBER(4,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>SBICODE</TD><TD>PK + FK naar UH_CODE_SBICODE.</TD></TR>
+          <TR class="even"><TD>VESTIGINGS_NUMMER</TD><TD>PK + FK naar UI_VESTIGING</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>KVK_NUMMER van de registratie.</TD></TR>
+          <TR class="even"><TD>ISHOOFDACTIVITEIT</TD><TD>Indicatie of dit de/een hoofdactiviteit is voor de vestiging.</TD></TR>
+          <TR class="odd"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip waarop de gebeurtenis is geregistreerd bij de Kamer van Koophandel.</TD></TR>
+          <TR class="even"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="odd"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd.</TD></TR>
+          <TR class="even"><TD>DEFINITIEJAAR</TD><TD>[2008,2025] Het jaar waarin de SBICODE gedefinieerd is - betekenis van dezelfde SBICODE kan anders zijn in een ander DEFINITIEJAAR.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>USV_PK(SBICODE,DEFINITIEJAAR,VESTIGINGS_NUMMER,KVK_NUMMER)</CODE>
+      <H2><A name="UI_VEST_HANDELSNAAM_RELATIE"></A>2.31 - UI_VEST_HANDELSNAAM_RELATIE</H2>
+      De handelsnamen bij de vestigingen van de KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_VEST_HANDELSNAAM_RELATIE</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UVHR</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Hiermee wordt vastgelegd in welke periode (datumAanvang tot (eventueel) datumEinde) de Handelsnaam bij een Vestiging is gevoerd, en de volgorde van de handelsnaam bij de Vestiging.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VESTIGINGS_NUMMER</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HANDELSNAAM_ID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>VOLGORDE</TD><TD>NUMBER(4,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VESTIGINGS_NUMMER</TD><TD>Dit is de verwijzende sleutel naar UI_vestiging</TD></TR>
+          <TR class="even"><TD>HANDELSNAAM_ID</TD><TD>Dit is de verwijzende sleutel naar UI_handelsnaam</TD></TR>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>Dit is de verwijzende sleutel naar UI_Onderneming</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+          <TR class="odd"><TD>VOLGORDE</TD><TD>De volgorde waarop de handelsnamen worden getoond bij de vestiging. Is altijd 0 bij een niet-commerciële vestiging.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UVHR_PK(KVK_NUMMER,VESTIGINGS_NUMMER,HANDELSNAAM_ID,VOLGORDE)</CODE>
+      <H2><A name="UI_VESTIGING"></A>2.32 - UI_VESTIGING</H2>
+      Vestigingen die horen bij KvK inschrijvingen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UI_VESTIGING</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UVS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">INLEES tabel --> Een Vestiging is gebouw of een complex van gebouwen waar duurzame uitoefening van activiteiten van een Onderneming of Rechtspersoon plaatsvindt.
+Toelichting:
+De vestiging is een combinatie van Activiteiten en Locatie.
+</TD></TR>
+
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VESTIGINGS_NUMMER</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>EERSTE_HANDELSNAAM</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IND_COMMERCIEEL</TD><TD>CHAR(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ACTIVITEIT_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>VESTIGING_CATEGORIE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VOLTIJD_WERKZAME_PERSONEN</TD><TD>NUMBER(6,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEELTIJD_WERKZAME_PERSONEN</TD><TD>NUMBER(6,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>TOTAAL_WERKZAME_PERSONEN</TD><TD>NUMBER(6,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VESTIGINGS_NUMMER</TD><TD>Betreft het identificerende gegevens voor de Vestiging</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Is een verwijzende sleutel naar UI_vestiging</TD></TR>
+          <TR class="odd"><TD>EERSTE_HANDELSNAAM</TD><TD>De naam (niet commerciële vestiging) of eerste handelsnaam (commerciële vestiging) van de Vestiging</TD></TR>
+          <TR class="even"><TD>IND_COMMERCIEEL</TD><TD>['J','N'] indicatie 'J'a / 'N'ee of dit een commerciële vestiging is</TD></TR>
+          <TR class="odd"><TD>ACTIVITEIT_ID</TD><TD>Deze key verwijst naar UI_activiteiten</TD></TR>
+          <TR class="even"><TD>REGISTRATIE_TIJDSTIP</TD><TD>Het tijdstip dat de gebeurtenis is geregistreerd bij de Kamer van Koophandel</TD></TR>
+          <TR class="odd"><TD>DATUM_AANVANG</TD><TD>De datum waarbij het gegevensobject in de echte wereld is ontstaan.</TD></TR>
+          <TR class="even"><TD>DATUM_EINDE</TD><TD>De datum waarbij het gegevensobject in de echte wereld is beëindigd</TD></TR>
+          <TR class="odd"><TD>VESTIGING_CATEGORIE</TD><TD>['H','N'] Code die de vestiging categorie aangeeft - 'h'oofd of 'n'even</TD></TR>
+          <TR class="even"><TD>VOLTIJD_WERKZAME_PERSONEN</TD><TD>Aantal medewerkers met een voltijd aanstelling</TD></TR>
+          <TR class="odd"><TD>DEELTIJD_WERKZAME_PERSONEN</TD><TD>Aantal medewerkers met een deeltijd aanstelling</TD></TR>
+          <TR class="even"><TD>TOTAAL_WERKZAME_PERSONEN</TD><TD>Aantal medewerkers totaal</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UVS_PK(VESTIGINGS_NUMMER,KVK_NUMMER)</CODE>
+    <H1><A name="Views"></A>3 - Views</H1><HR>
+    <H1><A name="Procedures"></A>4 - Procedures</H1><HR>
+    <H1><A name="Functions"></A>5 - Functions</H1><HR>
+    <H1><A name="Packages"></A>6 - Packages</H1><HR>
+  </BODY>
+</HTML>
+    <H1><A name="Sequences"></A>7 - Sequences</H1><HR>
+      Geen sequences gedefinieerd voor deze gebruiker
+    <H1><A name="Synonyms"></A>8 - Synonyms</H1><HR>
+      Geen synonyms gedefinieerd voor deze gebruiker
+    <H1><A name="Grants_received"></A>9 - Grants received</H1><HR>
+    <H2><A name="SYS_grants_received"></A>9.1 - SYS grants</H2>
+      Geen SYS privileges toegekend aan deze gebruiker
+    <H2><A name="Object_grants_received"></A>9.2 - Grants on user objects</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Owner</TH><TH class="kolomnaam">Object name</TH><TH class="kolomnaam">Privilege</TH><TH class="kolomnaam">Grantable</TH></TR></THEAD>
+        <TBODY>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+  </BODY>
+</HTML>

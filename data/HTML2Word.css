@@ -1,0 +1,22 @@
+DIV.titel   { font-size: 30px; text-align: center; }
+DIV.colofon { font-size: 15px; text-align: right; }
+
+H1, H2 { color: #000000; background-color: #FFFFFF;
+         font-family: sans-serif; }
+H1     { font-size: 24px; }
+H2     { font-size: 20px; }
+
+TABLE { border-collapse: collapse; border: none; width: 600px;}
+TH    { border: solid 2px #000000; background-color: #AABBFF; text-align: left; }
+TD    { border: solid 2px #000000;
+        font-family: monospace; text-align: left; }
+TR.even { background-color: #e1fffe; }
+TR.odd  { background-color: #ffffff; }
+.label        { width: 200px; background-color: #AABBFF; }
+.waarde       { width: 400px; background-color: #e1fffe; }
+.kolomnaam    { width: 200px; }
+.datatype     { width: 140px; }
+.nullnotnull  { width:  60px; }
+.data_default { width: 200px; }
+.commentaar   { width: 400px; }
+.number       { text-align: right; }

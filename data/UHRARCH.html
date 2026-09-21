@@ -1,0 +1,1379 @@
+<HTML>
+  <HEAD>
+    <TITLE>TDM voor schema UHRARCH</TITLE>
+    <LINK href="HTML2Word.css" rel="STYLESHEET" type="text/css">
+  </HEAD>
+  <BODY>
+    <MARQUEE>Deze code is nog niet uitontwikkeld !!!</MARQUEE>
+    <BR><DIV class="titel">Technisch datamodel voor schema <CODE>UHRARCH</CODE></DIV>
+    <BR><DIV class="colofon">Versienummer: <CODE>2.2.6</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd op <CODE>2026/06/25 11:35:32</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd door de HTML2Word <CODE>FUNCTION</CODE> <CODE>GET_TAB_TF</CODE></DIV>
+    <BR><DIV class="colofon">Tabelbreedtes zijn geoptimaliseerd voor copy&amp;paste naar A4 formaat documenten in Word</DIV>
+    <H1>1 - Inhoudsopgave</H1><HR>
+      <A href="#Tabellen">2 - Tabellen</A>
+      <BR><SMALL><A href="#AANMELDING_QTAB">2.1 - AANMELDING_QTAB</A></SMALL>
+      <BR><SMALL><A href="#TMP_KVK_NUMMERS_2025_12">2.2 - TMP_KVK_NUMMERS_2025_12</A></SMALL>
+      <BR><SMALL><A href="#TMP_KVK_NUMMERS_2026_03">2.3 - TMP_KVK_NUMMERS_2026_03</A></SMALL>
+      <BR><SMALL><A href="#UA_CODE_BERICHT_SOORT">2.4 - UA_CODE_BERICHT_SOORT</A></SMALL>
+      <BR><SMALL><A href="#UA_CODE_IND_AANWEZIG_IN_UHR">2.5 - UA_CODE_IND_AANWEZIG_IN_UHR</A></SMALL>
+      <BR><SMALL><A href="#UA_CODE_IND_DATAOPVRAGEN">2.6 - UA_CODE_IND_DATAOPVRAGEN</A></SMALL>
+      <BR><SMALL><A href="#UA_CODE_IND_VERWERKT">2.7 - UA_CODE_IND_VERWERKT</A></SMALL>
+      <BR><SMALL><A href="#UA_CODE_KVK_IPDCODE">2.8 - UA_CODE_KVK_IPDCODE</A></SMALL>
+      <BR><SMALL><A href="#UA_CODE_STATUS">2.9 - UA_CODE_STATUS</A></SMALL>
+      <BR><SMALL><A href="#UA_CODE_STATUS_UITVAL_BERICHT">2.10 - UA_CODE_STATUS_UITVAL_BERICHT</A></SMALL>
+      <BR><SMALL><A href="#UA_DATA_BERICHT_KVK">2.11 - UA_DATA_BERICHT_KVK</A></SMALL>
+      <BR><SMALL><A href="#UA_DATA_BERICHT_KVK_LOG">2.12 - UA_DATA_BERICHT_KVK_LOG</A></SMALL>
+      <BR><SMALL><A href="#UA_DATA_REQUEST_AAN_KVK">2.13 - UA_DATA_REQUEST_AAN_KVK</A></SMALL>
+      <BR><SMALL><A href="#UA_DATA_REQUEST_AAN_KVK_LOG">2.14 - UA_DATA_REQUEST_AAN_KVK_LOG</A></SMALL>
+      <BR><SMALL><A href="#UA_KVK_BERICHTSOORT">2.15 - UA_KVK_BERICHTSOORT</A></SMALL>
+      <BR><SMALL><A href="#UA_KVK_BERICHTSOORT_NAMESPACES">2.16 - UA_KVK_BERICHTSOORT_NAMESPACES</A></SMALL>
+      <BR><SMALL><A href="#UA_KVK_BERICHTSOORT_XPATHS">2.17 - UA_KVK_BERICHTSOORT_XPATHS</A></SMALL>
+      <BR><SMALL><A href="#UA_KVK_WIJZIGING_SIGNAAL">2.18 - UA_KVK_WIJZIGING_SIGNAAL</A></SMALL>
+      <BR><SMALL><A href="#UA_UITGEVALLEN_BERICHT">2.19 - UA_UITGEVALLEN_BERICHT</A></SMALL>
+      <BR><SMALL><A href="#UA_UITGEVALLEN_BERICHT_LOG">2.20 - UA_UITGEVALLEN_BERICHT_LOG</A></SMALL>
+      <BR><A href="#Views">3 - Views</A>
+      <BR><SMALL><A href="#AQ$AANMELDING_QTAB">3.1 - AQ$AANMELDING_QTAB</A></SMALL>
+      <BR><SMALL><A href="#AQ$_AANMELDING_QTAB_F">3.2 - AQ$_AANMELDING_QTAB_F</A></SMALL>
+      <BR><SMALL><A href="#UA_STATUS_PWS_VW">3.3 - UA_STATUS_PWS_VW</A></SMALL>
+      <BR><SMALL><A href="#UA_STATUS_UITVAL_VW">3.4 - UA_STATUS_UITVAL_VW</A></SMALL>
+      <BR><SMALL><A href="#UA_STATUS_VERWERKING_VW">3.5 - UA_STATUS_VERWERKING_VW</A></SMALL>
+      <BR><SMALL><A href="#UA_V_UBT_FOUT_DATABERICHT">3.6 - UA_V_UBT_FOUT_DATABERICHT</A></SMALL>
+      <BR><SMALL><A href="#UA_V_UBT_FOUT_DATA_LTST_MND">3.7 - UA_V_UBT_FOUT_DATA_LTST_MND</A></SMALL>
+      <BR><SMALL><A href="#UA_V_UBT_FOUT_MUT_BERICHT">3.8 - UA_V_UBT_FOUT_MUT_BERICHT</A></SMALL>
+      <BR><SMALL><A href="#UA_V_UBT_FOUT_MUT_LTST_MND">3.9 - UA_V_UBT_FOUT_MUT_LTST_MND</A></SMALL>
+      <BR><A href="#Procedures">4 - Procedures</A>
+      <BR><SMALL><A href="#GET_REQUEST">4.1 - GET_REQUEST</A></SMALL>
+      <BR><SMALL><A href="#GRANT_SUID_TABLES_ADMIN">4.2 - GRANT_SUID_TABLES_ADMIN</A></SMALL>
+      <BR><SMALL><A href="#OPHALEN_BERICHT">4.3 - OPHALEN_BERICHT</A></SMALL>
+      <BR><SMALL><A href="#PROCESS_REQUESTS">4.4 - PROCESS_REQUESTS</A></SMALL>
+      <BR><SMALL><A href="#PUT_REQUEST">4.5 - PUT_REQUEST</A></SMALL>
+      <BR><SMALL><A href="#UHR01_VERSLAGLEGGING">4.6 - UHR01_VERSLAGLEGGING</A></SMALL>
+      <BR><A href="#Functions">5 - Functions</A>
+      <BR><A href="#Packages">6 - Packages</A>
+      <BR><SMALL><A href="#DEMO">6.1 - DEMO</A></SMALL>
+      <BR><SMALL><A href="#UHR01_UITVAL_BERICHTEN">6.2 - UHR01_UITVAL_BERICHTEN</A></SMALL>
+      <BR><SMALL><A href="#UHR02_KVK_BERICHTEN">6.3 - UHR02_KVK_BERICHTEN</A></SMALL>
+      <BR><SMALL><A href="#VERWERK_KVK_WIJZIGING">6.4 - VERWERK_KVK_WIJZIGING</A></SMALL>
+      <BR><A href="#Sequences">7 - Sequences</A>
+      <BR><A href="#Synonyms">8 - Synonyms</A>
+      <BR><A href="#Grants_received">9 - Grants received</A>
+      <BR><SMALL><A href="#SYS_grants_received">9.1 - SYS grants</A></SMALL>
+      <BR><SMALL><A href="#Object_grants_received">9.2 - Grants on user objects</A></SMALL>
+    <H1><A name="Tabellen"></A>2 - Tabellen</H1><HR>
+      <H2><A name="AANMELDING_QTAB"></A>2.1 - AANMELDING_QTAB</H2>
+
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">AANMELDING_QTAB</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>Q_NAME</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>MSGID</TD><TD>RAWundef</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>CORRID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>PRIORITY</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>STATE</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DELAY</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXPIRATION</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>TIME_MANAGER_INFO</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCAL_ORDER_NO</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CHAIN_NO</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>CSCN</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DSCN</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TIME</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_UID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TID</TD><TD>VARCHAR2(30 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TIME</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_UID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TID</TD><TD>VARCHAR2(30 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RETRY_COUNT</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>EXCEPTION_QSCHEMA</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXCEPTION_QUEUE</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STEP_NO</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RECIPIENT_KEY</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQUEUE_MSGID</TD><TD>RAWundef</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_NAME</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_ADDRESS</TD><TD>VARCHAR2(1024 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_PROTOCOL</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>USER_DATA</TD><TD>AANMELDING_TYPEundef</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>USER_PROP</TD><TD>ANYDATAundef</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>Q_NAME</TD><TD></TD></TR>
+          <TR class="even"><TD>MSGID</TD><TD></TD></TR>
+          <TR class="odd"><TD>CORRID</TD><TD></TD></TR>
+          <TR class="even"><TD>PRIORITY</TD><TD></TD></TR>
+          <TR class="odd"><TD>STATE</TD><TD></TD></TR>
+          <TR class="even"><TD>DELAY</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXPIRATION</TD><TD></TD></TR>
+          <TR class="even"><TD>TIME_MANAGER_INFO</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCAL_ORDER_NO</TD><TD></TD></TR>
+          <TR class="even"><TD>CHAIN_NO</TD><TD></TD></TR>
+          <TR class="odd"><TD>CSCN</TD><TD></TD></TR>
+          <TR class="even"><TD>DSCN</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TIME</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_UID</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TID</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TIME</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_UID</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TID</TD><TD></TD></TR>
+          <TR class="odd"><TD>RETRY_COUNT</TD><TD></TD></TR>
+          <TR class="even"><TD>EXCEPTION_QSCHEMA</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXCEPTION_QUEUE</TD><TD></TD></TR>
+          <TR class="even"><TD>STEP_NO</TD><TD></TD></TR>
+          <TR class="odd"><TD>RECIPIENT_KEY</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQUEUE_MSGID</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_NAME</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_ADDRESS</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_PROTOCOL</TD><TD></TD></TR>
+          <TR class="even"><TD>USER_DATA</TD><TD></TD></TR>
+          <TR class="odd"><TD>USER_PROP</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>SYS_C0012511(MSGID)</CODE>
+      <H2><A name="TMP_KVK_NUMMERS_2025_12"></A>2.2 - TMP_KVK_NUMMERS_2025_12</H2>
+      KvK lijst actieve inschrijvingen stand december 2025
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">TMP_KVK_NUMMERS_2025_12</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">KN2512</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>KvK nummer</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>TKN_2025_12_PK(KVK_NUMMER)</CODE>
+      <H2><A name="TMP_KVK_NUMMERS_2026_03"></A>2.3 - TMP_KVK_NUMMERS_2026_03</H2>
+      KvK lijst actieve inschrijvingen stand december 2025
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">TMP_KVK_NUMMERS_2026_03</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">KN2603</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>KVK_NUMMER</TD><TD>KvK nummer</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>TKN_2026_03_PK(KVK_NUMMER)</CODE>
+      <H2><A name="UA_CODE_BERICHT_SOORT"></A>2.4 - UA_CODE_BERICHT_SOORT</H2>
+      UHRARCH domeintabel voor BERICHT_SOORT in UA_UITGEVALLEN_BERICHT
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_CODE_BERICHT_SOORT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCBS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">UHRARCH domeintabel voor BERICHT_SOORT in UA_UITGEVALLEN_BERICHT.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>PK - bericht soort</TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>Betekenis van de BERICHT_SOORT waarde</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCBS_PK(BERICHT_SOORT)</CODE>
+      <H2><A name="UA_CODE_IND_AANWEZIG_IN_UHR"></A>2.5 - UA_CODE_IND_AANWEZIG_IN_UHR</H2>
+      UHRARCH domeintabel voor IND_AANWEZIG_IN_UHR in UA_KVK_WIJZIGING_SIGNAAL
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_CODE_IND_AANWEZIG_IN_UHR</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCIA</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">UHRARCH domeintabel voor IND_AANWEZIG_IN_UHR in UA_KVK_WIJZIGING_SIGNAAL.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IND_AANWEZIG_IN_UHR</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IND_AANWEZIG_IN_UHR</TD><TD>PK - indicatie aanwezig in UHR</TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>Betekenis van de IND_AANWEZIG_IN_UHR waarde</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCIA_PK(IND_AANWEZIG_IN_UHR)</CODE>
+      <H2><A name="UA_CODE_IND_DATAOPVRAGEN"></A>2.6 - UA_CODE_IND_DATAOPVRAGEN</H2>
+      UHRARCH domeintabel voor IND_DATAOPVRAGEN in UA_KVK_WIJZIGING_SIGNAAL
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_CODE_IND_DATAOPVRAGEN</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCID</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">UHRARCH domeintabel voor IND_DATAOPVRAGEN in UA_KVK_WIJZIGING_SIGNAAL.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IND_DATAOPVRAGEN</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IND_DATAOPVRAGEN</TD><TD>PK - indicatie data opvragen</TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>Betekenis van de IND_DATAOPVRAGEN waarde</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCID_PK(IND_DATAOPVRAGEN)</CODE>
+      <H2><A name="UA_CODE_IND_VERWERKT"></A>2.7 - UA_CODE_IND_VERWERKT</H2>
+      UHRARCH domeintabel voor IND_VERWERKT in tabel UA_DATA_BERICHT_KVK
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_CODE_IND_VERWERKT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCIV</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">UHRARCH domeintabel voor de IND_VERWERKT in tabel UA_DATA_BERICHT_KVK.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IND_VERWERKT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IND_VERWERKT</TD><TD>PK - Indicatie verwerkt</TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>Betekenis van de IND_VERWERKT waarde</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCIV_PK(IND_VERWERKT)</CODE>
+      <H2><A name="UA_CODE_KVK_IPDCODE"></A>2.8 - UA_CODE_KVK_IPDCODE</H2>
+      UHRARCH domeintabel voor IPD_CODE in tabel UA_UITGEVALLEN_BERICHT
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_CODE_KVK_IPDCODE</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">KIC</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">UHRARCH domeintabel voor IPD_CODE in UA_UITGEVALLEN_BERICHT.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>VARCHAR2(4 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_TYPE_CODE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>KVK_OMSCHRIJVING</TD><TD>VARCHAR2(200 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_TOELICHTING</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>UHR_TYPE_CODE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>UHR_TOELICHTING</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>PK. IPD foutcode die KvK in een response kan gebruiken. Uitvullen met voorloopnullen!</TD></TR>
+          <TR class="even"><TD>KVK_TYPE_CODE</TD><TD>['I','F'] Indicatie of het een informatie IPD code is of een foutmelding IPD code</TD></TR>
+          <TR class="odd"><TD>KVK_OMSCHRIJVING</TD><TD>Omschrijving bij de IPD code uit de documentatie van KvK</TD></TR>
+          <TR class="even"><TD>KVK_TOELICHTING</TD><TD>Toelichting bij de KvK omschrijving</TD></TR>
+          <TR class="odd"><TD>UHR_TYPE_CODE</TD><TD>['I','F'] Indicatie of dit voor UHR een foutsituatie is</TD></TR>
+          <TR class="even"><TD>UHR_TOELICHTING</TD><TD>Toelichting over de betekenis van deze IPD code voor UHR</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UA_KIC_PK(IPD_CODE)</CODE>
+      <H2><A name="UA_CODE_STATUS"></A>2.9 - UA_CODE_STATUS</H2>
+      UHRARCH domeintabel voor STATUS uit tabel UA_DATA_REQUEST_AAN_KVK
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_CODE_STATUS</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCSS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">UHRARCH domeintabel voor STATUS uit tabel UA_DATA_REQUEST_AAN_KVK.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>STATUS</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>STATUS</TD><TD>PK - status van een request in UA_DATA_REQUEST_AAN_KVK</TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>Betekenis van de status waarde</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCSS_PK(STATUS)</CODE>
+      <H2><A name="UA_CODE_STATUS_UITVAL_BERICHT"></A>2.10 - UA_CODE_STATUS_UITVAL_BERICHT</H2>
+      UHRARCH domeintabel voor STATUS_UITVAL uit tabel UA_UITGEVALLEN_BERICHT
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_CODE_STATUS_UITVAL_BERICHT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UCSU</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">UHRARCH domeintabel voor STATUS_UITVAL_BERICHT uit tabel UA_UITGEVALLEN_BERICHT.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>STATUS_UITVAL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>VARCHAR2(1000 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>STATUS_UITVAL</TD><TD>PK - status van een uitgevallen bericht in UA_UITGEVALLEN_BERICHT</TD></TR>
+          <TR class="even"><TD>BETEKENIS</TD><TD>Betekenis van de status waarde</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UCSU_PK(STATUS_UITVAL)</CODE>
+      <H2><A name="UA_DATA_BERICHT_KVK"></A>2.11 - UA_DATA_BERICHT_KVK</H2>
+      De door UHR van KvK ontvangen XML berichten
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_DATA_BERICHT_KVK</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">DBK</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Van KvK ontvangen databerichten die aan het XSD voldoen.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD>uhrarch.uhr_dbk_seq.nextval</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD>systimestamp</TD></TR>
+          <TR class="even"><TD>BERICHT</TD><TD>XMLTYPE</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>IND_VERWERKT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD>'N'</TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BATCH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_VERWERKING</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>FOUTCODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>FOUTMELDING</TD><TD>VARCHAR2(500 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DBERID</TD><TD>Unieke gegenereerde sleutel van de tabel</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Betreft het identificerende gegeven voor de {MaatschappelijkeActiviteit}, het KvK-nummer</TD></TR>
+          <TR class="odd"><TD>DATUMTIJD_IN_DB</TD><TD>Datum/tijd dat het bericht in de database geplaatst is</TD></TR>
+          <TR class="even"><TD>BERICHT</TD><TD>Het  complete XML data bericht zoals dit door de KvK geleverd wordt</TD></TR>
+          <TR class="odd"><TD>IND_VERWERKT</TD><TD>Geeft aan of het data bericht al door de laadmodule in de database is verwerkt.</TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>Dit de verwijzende sleutel naar tabel UA_DATA_REQUEST_AAN_KVK, op basis waarvan dit databericht ontvangen is.</TD></TR>
+          <TR class="odd"><TD>BATCH_ID</TD><TD>batch_id komt uit SCALADIV</TD></TR>
+          <TR class="even"><TD>DATUM_VERWERKING</TD><TD>Datum van verwerking van XML</TD></TR>
+          <TR class="odd"><TD>FOUTCODE</TD><TD>Oracle foutcode/foutcode van de foutmelding</TD></TR>
+          <TR class="even"><TD>FOUTMELDING</TD><TD>beschrijving van de foutmelding</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>DBK_PK(DBERID)</CODE>
+      <BR>Trigger <CODE>DBK_BIUR_TRG</CODE> type <CODE>BEFORE EACH ROW</CODE> event <CODE>INSERT OR UPDATE</CODE>
+      <H2><A name="UA_DATA_BERICHT_KVK_LOG"></A>2.12 - UA_DATA_BERICHT_KVK_LOG</H2>
+      Logging van de door UHR van KvK ontvangen XML berichten
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_DATA_BERICHT_KVK_LOG</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">DBKL</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Logtabel voor UA_DATA_BERICHT_KVK.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IND_VERWERKT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD>'N'</TD></TR>
+          <TR class="odd"><TD>BATCH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_VERWERKING</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>FOUTCODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>FOUTMELDING</TD><TD>VARCHAR2(500 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD>systimestamp </TD></TR>
+          <TR class="even"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD>TO_DATE( '99991231', 'yyyymmdd' ) </TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DBERID</TD><TD>Unieke gegenereerde sleutel van de tabel</TD></TR>
+          <TR class="even"><TD>IND_VERWERKT</TD><TD>Geeft aan of het data bericht al door de laadmodule in de database is verwerkt.</TD></TR>
+          <TR class="odd"><TD>BATCH_ID</TD><TD>batch_id komt uit SCALADIV</TD></TR>
+          <TR class="even"><TD>DATUM_VERWERKING</TD><TD>Datum van verwerking van XML</TD></TR>
+          <TR class="odd"><TD>FOUTCODE</TD><TD>Oracle foutcode/foutcode van de foutmelding</TD></TR>
+          <TR class="even"><TD>FOUTMELDING</TD><TD>beschrijving van de foutmelding</TD></TR>
+          <TR class="odd"><TD>HIS_TS_IN</TD><TD>Datumtijd waarop het record is aangemaakt in UA_DATA_BERICHT_KVK</TD></TR>
+          <TR class="even"><TD>HIS_TS_END</TD><TD>Datumtijd waarop het record is gewijzigd in UA_DATA_BERICHT_KVK</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>DBKL_PK(DBERID,HIS_TS_IN)</CODE>
+      <H2><A name="UA_DATA_REQUEST_AAN_KVK"></A>2.13 - UA_DATA_REQUEST_AAN_KVK</H2>
+      De door UHR voor KvK klaargezet requests
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_DATA_REQUEST_AAN_KVK</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">DRK</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Aan KvK te sturen/verstuurde data requests.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD>uhrarch.uhr_drk_seq.nextval </TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>VESTIGING</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD>systimestamp</TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>VARCHAR2(20 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>VARCHAR2(40 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WBERID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RESPONSE_TELLER</TD><TD>NUMBER(3,0)</TD><TD>NOT NULL</TD><TD>0 </TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_RESPONSE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REQUERY_NA</TD><TD>DATE</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>REQID</TD><TD>Unieke gegenereerde sleutel van de tabel</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Betreft het identificerende gegeven voor de {MaatschappelijkeActiviteit}, het KvK-nummer</TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>Het door een kamer toegekend uniek nummer voor de NietNatuurlijkPersoon</TD></TR>
+          <TR class="even"><TD>VESTIGING</TD><TD>Een Vestiging is gebouw of een complex van gebouwen waar duurzame uitoefening van activiteiten van een Onderneming of Rechtspersoon plaatsvindt.</TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>Het burgerservicenummer van de NatuurlijkPersoon. In dit geval betreft het de eigenaar van een eenmanszaak.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>Datum/tijd dat het bericht in de database geplaatst is</TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>N= nog aan te vragen, A=antwoord ontvangen, F=Fout</TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>Naam van het proces dat deze request heeft gedaan. WIJZKVK</TD></TR>
+          <TR class="odd"><TD>WBERID</TD><TD>Indien het request op basis van een KVK bericht is, dan is dit de verwijzende sleutel naar UA_KVK_WIJZIGING_SIGNAAL</TD></TR>
+          <TR class="even"><TD>RESPONSE_TELLER</TD><TD>Aantal responses dat tot nu toe ontvangen is bij deze request</TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_RESPONSE</TD><TD>Timestamp van de meest recent ontvangen response</TD></TR>
+          <TR class="even"><TD>REQUERY_NA</TD><TD>Indien er een nieuwe query verzonden moet worden, dan moet dat na dit tijdstip</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>DRK_PK(REQID)</CODE>
+      <BR>Trigger <CODE>DRK_BIUR_TRG</CODE> type <CODE>BEFORE EACH ROW</CODE> event <CODE>INSERT OR UPDATE</CODE>
+      <H2><A name="UA_DATA_REQUEST_AAN_KVK_LOG"></A>2.14 - UA_DATA_REQUEST_AAN_KVK_LOG</H2>
+      Logging van de door UHR voor KvK klaargezet requests
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_DATA_REQUEST_AAN_KVK_LOG</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">DRKL</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Logtabel voor UA_DATA_REQUEST_AAN_KVK.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATUS</TD><TD>VARCHAR2(20 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>AANVRAGER</TD><TD>VARCHAR2(40 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RESPONSE_TELLER</TD><TD>NUMBER(3,0)</TD><TD>NOT NULL</TD><TD>0 </TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_RESPONSE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REQUERY_NA</TD><TD>DATE</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD>SYSTIMESTAMP </TD></TR>
+          <TR class="even"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD>TO_DATE( '99991231', 'yyyymmdd' ) </TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>REQID</TD><TD>Unieke gegenereerde sleutel van de tabel</TD></TR>
+          <TR class="even"><TD>STATUS</TD><TD>N= nog aan te vragen, A=antwoord ontvangen, F=Fout</TD></TR>
+          <TR class="odd"><TD>AANVRAGER</TD><TD>Naam van het proces dat deze request heeft gedaan. WIJZKVK</TD></TR>
+          <TR class="even"><TD>RESPONSE_TELLER</TD><TD>Aantal responses dat tot nu toe ontvangen is bij deze request</TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_RESPONSE</TD><TD>Timestamp van de meest recent ontvangen response</TD></TR>
+          <TR class="even"><TD>REQUERY_NA</TD><TD>Indien er een nieuwe query verzonden moet worden, dan moet dat na dit tijdstip</TD></TR>
+          <TR class="odd"><TD>HIS_TS_IN</TD><TD>Datumtijd waarop het record is aangemaakt in UA_DATA_REQUEST_AAN_KVK</TD></TR>
+          <TR class="even"><TD>HIS_TS_END</TD><TD>Datumtijd waarop het record is gewijzigd in UA_DATA_REQUEST_AAN_KVK</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>DRKL_PK(REQID,HIS_TS_IN)</CODE>
+      <H2><A name="UA_KVK_BERICHTSOORT"></A>2.15 - UA_KVK_BERICHTSOORT</H2>
+      Soorten berichten die in een XML kunnen zitten
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_KVK_BERICHTSOORT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">KBS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Vastlegging van welke wijzigingen in een KvK wijzigingsignaal interessant zijn voor UWV.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VOLGNR</TD><TD>NUMBER(3,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATSTART</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>OMSCHRIJVING</TD><TD>VARCHAR2(60 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>XPATH</TD><TD>VARCHAR2(200 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>VOLGNR</TD><TD>volgnr waarin het gegeven wordt getest</TD></TR>
+          <TR class="even"><TD>DATSTART</TD><TD>Datum waarop de regel geldig wordt</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>Datum t/m waarop de regel geldig is</TD></TR>
+          <TR class="even"><TD>OMSCHRIJVING</TD><TD>omschrijving van het gecontroleerde gegeven</TD></TR>
+          <TR class="odd"><TD>XPATH</TD><TD>xpath voor waarmee het gegeven in het update-bericht kan worden opgezocht / volledige namespace voor het bericht</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>KBS_PK(VOLGNR,DATSTART)</CODE>
+      <H2><A name="UA_KVK_BERICHTSOORT_NAMESPACES"></A>2.16 - UA_KVK_BERICHTSOORT_NAMESPACES</H2>
+      Namespace definities om te zoeken naar relevante mutatie indicatoren.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_KVK_BERICHTSOORT_NAMESPACES</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">BSNS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BSNS_ID</TD><TD>NUMBER(3,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>OMSCHRIJVING</TD><TD>VARCHAR2(60 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>NAMESPACE</TD><TD>VARCHAR2(200 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATSTART</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD>19000101   </TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD>99991231   </TD></TR>
+          <TR class="even"><TD>XPATH</TD><TD>VARCHAR2(200 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ZOEKVELD</TD><TD>VARCHAR2(100 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BSNS_ID</TD><TD>ID van de berischtsoort namespace,</TD></TR>
+          <TR class="even"><TD>OMSCHRIJVING</TD><TD>Omschrijving van namespaces zijn (voor als er meerdere namespaces zijn bij een wijzigings bericht).</TD></TR>
+          <TR class="odd"><TD>NAMESPACE</TD><TD>Namespace(s) definitie (kunnen meerdere namespaces zijn).</TD></TR>
+          <TR class="even"><TD>DATSTART</TD><TD>[yyyymmdd] Startdatum van de geldigheidsperiode van deze versie van deze namespace. Vullen met DATEIND+1 vorige record, zoeken met TO_NUMBER(TO_CHAR(datum,'yyyymmdd')) BETWEEN DATSTART AND DATEIND.</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>[yyyymmdd] Einddatum van de geldigheidsperiode van deze versie van deze namespace. Vullen met óf 99991231 óf DATSTART-1 volgend record, zoeken met TO_NUMBER(TO_CHAR(datum,'yyyymmdd')) BETWEEN DATSTART AND DATEIND.</TD></TR>
+          <TR class="even"><TD>XPATH</TD><TD>XPath voor een te vinden XML element dat altijd aanwezig is in het XML. Denormalisatie om code eenvoudiger en sneller te maken.</TD></TR>
+          <TR class="odd"><TD>ZOEKVELD</TD><TD>Naam van een XML element dat altijd aanwezig is in het XML. Denormalisatie om code eenvoudiger en sneller te maken.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>BSNS_PK(BSNS_ID)</CODE>
+      <H2><A name="UA_KVK_BERICHTSOORT_XPATHS"></A>2.17 - UA_KVK_BERICHTSOORT_XPATHS</H2>
+      XPath zoektermen om te zoeken naar mutatie indicatoren.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_KVK_BERICHTSOORT_XPATHS</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">BSXP</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BSNS_ID</TD><TD>NUMBER(3,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BSXP_ID</TD><TD>NUMBER(3,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATSTART</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD>99991231   </TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING</TD><TD>VARCHAR2(60 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>XPATH</TD><TD>VARCHAR2(200 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>BSNS_ID</TD><TD>FK naar UHRARCH.UA_KVK_BERICHTSOORT_NAMESPACES.</TD></TR>
+          <TR class="even"><TD>BSXP_ID</TD><TD>ID van het XPath zoekpad dat opgezocht gaat worden in het wijzigingsbericht.</TD></TR>
+          <TR class="odd"><TD>DATSTART</TD><TD>[yyyymmdd] Startdatum van de geldigheidsperiode van deze versie van dit XPath zoekpad. Vullen met DATEIND+1 vorige record, zoeken met TO_NUMBER(TO_CHAR(datum,'yyyymmdd')) BETWEEN DATSTART AND DATEIND.</TD></TR>
+          <TR class="even"><TD>DATEIND</TD><TD>[yyyymmdd] Einddatum van de geldigheidsperiode van deze versie van dit XPath zoekpad. Vullen met óf 99991231 óf DATSTART-1 volgend record, zoeken met TO_NUMBER(TO_CHAR(datum,'yyyymmdd')) BETWEEN DATSTART AND DATEIND.</TD></TR>
+          <TR class="odd"><TD>OMSCHRIJVING</TD><TD>Omschrijving van het XPath zoekpad.</TD></TR>
+          <TR class="even"><TD>XPATH</TD><TD>Het XPath zoekpad, inclusief namespaces aliassen.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>BSXP_PK(BSXP_ID,DATSTART)</CODE>
+      <BR>Foreign key constraint <CODE>BSXP_BSNS_FK(BSNS_ID)</CODE> references constraint <CODE>UHRARCH.BSNS_PK</CODE>
+      <H2><A name="UA_KVK_WIJZIGING_SIGNAAL"></A>2.18 - UA_KVK_WIJZIGING_SIGNAAL</H2>
+      Een van KvK ontvangen wijzigingssignaal
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_KVK_WIJZIGING_SIGNAAL</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">KWS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Van KvK ontvangen wijzigingsignalen.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>WBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD>uhrarch.uhr_kws_seq.nextval </TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD>systimestamp</TD></TR>
+          <TR class="even"><TD>BERICHT</TD><TD>XMLTYPE</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REGISTRATIETIJDSTIP_KVK</TD><TD>NUMBER(17,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IND_DATAOPVRAGEN</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>IND_AANWEZIG_IN_UHR</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>WBERID</TD><TD>Unieke gegenereerde sleutel van de tabel</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Betreft het identificerende gegeven voor de {MaatschappelijkeActiviteit}, het KvK-nummer</TD></TR>
+          <TR class="odd"><TD>DATUMTIJD_IN_DB</TD><TD>Datum/tijd dat het bericht in de database geplaatst is</TD></TR>
+          <TR class="even"><TD>BERICHT</TD><TD>Het complete bericht</TD></TR>
+          <TR class="odd"><TD>REGISTRATIETIJDSTIP_KVK</TD><TD>Het tijdstip van registratie van de KVK</TD></TR>
+          <TR class="even"><TD>IND_DATAOPVRAGEN</TD><TD>Geeft aan of naar aanleiding van dit bericht in principe data opgehaald moet worden. Als IND_AANWEZIG_IN_UHR ook "J" is.</TD></TR>
+          <TR class="odd"><TD>IND_AANWEZIG_IN_UHR</TD><TD>Geeft aan dat dit KvK nummer in de UHR database opgenomen is.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>KWS_PK(WBERID)</CODE>
+      <H2><A name="UA_UITGEVALLEN_BERICHT"></A>2.19 - UA_UITGEVALLEN_BERICHT</H2>
+      De door UHR van KvK ontvangen niet verwerkbare XML berichten
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_UITGEVALLEN_BERICHT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UBT</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Van KvK ontvangen wijzigingsignalen en databerichten die niet aan het XSD voldoen en daarom niet verwerkt kunnen worden.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD>uhrarch.uhr_ubt_seq.nextval </TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD>systimestamp</TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BERICHT</TD><TD>CLOBundef</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IPD_CODE</TD><TD>VARCHAR2(4 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>STATUS_UITVAL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="even"><TD>REDEN_UITVAL</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_UPDATE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD>null </TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>Unieke gegenereerde sleutel van de tabel</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>Datum/tijd dat het bericht in de database geplaatst is</TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>Geeft aan welk soort bericht het veld bericht bevat: W = UA_KVK_WIJZIGING_SIGNAAL, D = UA_DATA_BERICHT_KVK</TD></TR>
+          <TR class="even"><TD>BERICHT</TD><TD>Het complete data bericht wat niet voldoet aan XML, JSON standaarden</TD></TR>
+          <TR class="odd"><TD>REQID</TD><TD>ID van het request dat vooraf ging aan de niet-verwerkbare response XML die in kolom BERICHT zit.</TD></TR>
+          <TR class="even"><TD>IPD_CODE</TD><TD>IPD code die KvK in een response kan gebruiken. Uitvullen met voorloopnullen!</TD></TR>
+          <TR class="odd"><TD>STATUS_UITVAL</TD><TD>['N','H','V'] Status van het uitgevallen bericht: Nieuw, Historisch, Verwerkt.</TD></TR>
+          <TR class="even"><TD>REDEN_UITVAL</TD><TD>Reden waarom een bericht is uitgevallen</TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_UPDATE</TD><TD>Timestamp van de laatste statusupdate van dit record</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>Betreft het identificerende gegeven voor de {MaatschappelijkeActiviteit}, het KvK-nummer</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UBT_PK(UBERID)</CODE>
+      <BR>Trigger <CODE>UBT_BIUR_TRG</CODE> type <CODE>BEFORE EACH ROW</CODE> event <CODE>INSERT OR UPDATE</CODE>
+      <H2><A name="UA_UITGEVALLEN_BERICHT_LOG"></A>2.20 - UA_UITGEVALLEN_BERICHT_LOG</H2>
+      Logging van de door UHR van KvK ontvangen niet verwerkbare XML berichten
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_UITGEVALLEN_BERICHT_LOG</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">UBTL</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Logtabel voor UA_UITGEVALLEN_BERICHT.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_UPDATE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD>SYSTIMESTAMP </TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD>TO_DATE( '99991231', 'yyyymmdd' ) </TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>FK naar UA_UITGEVALLEN_BERICHT</TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>['N','H','V'] Status van het uitgevallen bericht: Nieuw, Historisch, Verwerkt.</TD></TR>
+          <TR class="odd"><TD>TS_LAATSTE_UPDATE</TD><TD>Timestamp van de laatste statusupdate van dit record</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Datumtijd waarop het record is aangemaakt in UA_UITGEVALLEN_BERICHT</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Datumtijd waarop het record is gewijzigd in UA_UITGEVALLEN_BERICHT</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>UBTL_PK(UBERID,HIS_TS_IN)</CODE>
+    <H1><A name="Views"></A>3 - Views</H1><HR>
+      <H2><A name="AQ$AANMELDING_QTAB"></A>3.1 - AQ$AANMELDING_QTAB</H2>
+
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">AQ$AANMELDING_QTAB</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>QUEUE</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>MSG_ID</TD><TD>RAWundef</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>CORR_ID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>MSG_PRIORITY</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>MSG_STATE</TD><TD>VARCHAR2(16 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DELAY</TD><TD>DATE</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DELAY_TIMESTAMP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>EXPIRATION</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TIME</TD><TD>DATE</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_TIMESTAMP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_USER_ID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_TXN_ID</TD><TD>VARCHAR2(30 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_TIME</TD><TD>DATE</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TIMESTAMP</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_USER_ID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TXN_ID</TD><TD>VARCHAR2(30 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RETRY_COUNT</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>EXCEPTION_QUEUE_OWNER</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXCEPTION_QUEUE</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>USER_DATA</TD><TD>AANMELDING_TYPEundef</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ORIGINAL_QUEUE_NAME</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ORIGINAL_QUEUE_OWNER</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXPIRATION_REASON</TD><TD>VARCHAR2(18 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_NAME</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_ADDRESS</TD><TD>VARCHAR2(1024 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_PROTOCOL</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ORIGINAL_MSGID</TD><TD>RAWundef</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>QUEUE</TD><TD></TD></TR>
+          <TR class="even"><TD>MSG_ID</TD><TD></TD></TR>
+          <TR class="odd"><TD>CORR_ID</TD><TD></TD></TR>
+          <TR class="even"><TD>MSG_PRIORITY</TD><TD></TD></TR>
+          <TR class="odd"><TD>MSG_STATE</TD><TD></TD></TR>
+          <TR class="even"><TD>DELAY</TD><TD></TD></TR>
+          <TR class="odd"><TD>DELAY_TIMESTAMP</TD><TD></TD></TR>
+          <TR class="even"><TD>EXPIRATION</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TIME</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_TIMESTAMP</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_USER_ID</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_TXN_ID</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_TIME</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TIMESTAMP</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_USER_ID</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TXN_ID</TD><TD></TD></TR>
+          <TR class="odd"><TD>RETRY_COUNT</TD><TD></TD></TR>
+          <TR class="even"><TD>EXCEPTION_QUEUE_OWNER</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXCEPTION_QUEUE</TD><TD></TD></TR>
+          <TR class="even"><TD>USER_DATA</TD><TD></TD></TR>
+          <TR class="odd"><TD>ORIGINAL_QUEUE_NAME</TD><TD></TD></TR>
+          <TR class="even"><TD>ORIGINAL_QUEUE_OWNER</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXPIRATION_REASON</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_NAME</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_ADDRESS</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_PROTOCOL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ORIGINAL_MSGID</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="AQ$_AANMELDING_QTAB_F"></A>3.2 - AQ$_AANMELDING_QTAB_F</H2>
+
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">AQ$_AANMELDING_QTAB_F</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>Q_NAME</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ROW_ID</TD><TD>ROWIDundef</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>MSGID</TD><TD>RAWundef</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CORRID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>PRIORITY</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATE</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DELAY</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>EXPIRATION</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TIME</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_UID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TID</TD><TD>VARCHAR2(30 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TIME</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_UID</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TID</TD><TD>VARCHAR2(30 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RETRY_COUNT</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>EXCEPTION_QSCHEMA</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXCEPTION_QUEUE</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CSCN</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DSCN</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>CHAIN_NO</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCAL_ORDER_NO</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>TIME_MANAGER_INFO</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>STEP_NO</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>USER_DATA</TD><TD>AANMELDING_TYPEundef</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_NAME</TD><TD>VARCHAR2(128 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_ADDRESS</TD><TD>VARCHAR2(1024 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_PROTOCOL</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQUEUE_MSGID</TD><TD>RAWundef</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DELIVERY_MODE</TD><TD>CHAR(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>SEQUENCE_NUM</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>MSG_NUM</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>QUEUE_ID</TD><TD>NUMBER(,)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>USER_PROP</TD><TD>ANYDATAundef</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>Q_NAME</TD><TD></TD></TR>
+          <TR class="even"><TD>ROW_ID</TD><TD></TD></TR>
+          <TR class="odd"><TD>MSGID</TD><TD></TD></TR>
+          <TR class="even"><TD>CORRID</TD><TD></TD></TR>
+          <TR class="odd"><TD>PRIORITY</TD><TD></TD></TR>
+          <TR class="even"><TD>STATE</TD><TD></TD></TR>
+          <TR class="odd"><TD>DELAY</TD><TD></TD></TR>
+          <TR class="even"><TD>EXPIRATION</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TIME</TD><TD></TD></TR>
+          <TR class="even"><TD>ENQ_UID</TD><TD></TD></TR>
+          <TR class="odd"><TD>ENQ_TID</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TIME</TD><TD></TD></TR>
+          <TR class="odd"><TD>DEQ_UID</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQ_TID</TD><TD></TD></TR>
+          <TR class="odd"><TD>RETRY_COUNT</TD><TD></TD></TR>
+          <TR class="even"><TD>EXCEPTION_QSCHEMA</TD><TD></TD></TR>
+          <TR class="odd"><TD>EXCEPTION_QUEUE</TD><TD></TD></TR>
+          <TR class="even"><TD>CSCN</TD><TD></TD></TR>
+          <TR class="odd"><TD>DSCN</TD><TD></TD></TR>
+          <TR class="even"><TD>CHAIN_NO</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCAL_ORDER_NO</TD><TD></TD></TR>
+          <TR class="even"><TD>TIME_MANAGER_INFO</TD><TD></TD></TR>
+          <TR class="odd"><TD>STEP_NO</TD><TD></TD></TR>
+          <TR class="even"><TD>USER_DATA</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_NAME</TD><TD></TD></TR>
+          <TR class="even"><TD>SENDER_ADDRESS</TD><TD></TD></TR>
+          <TR class="odd"><TD>SENDER_PROTOCOL</TD><TD></TD></TR>
+          <TR class="even"><TD>DEQUEUE_MSGID</TD><TD></TD></TR>
+          <TR class="odd"><TD>DELIVERY_MODE</TD><TD></TD></TR>
+          <TR class="even"><TD>SEQUENCE_NUM</TD><TD></TD></TR>
+          <TR class="odd"><TD>MSG_NUM</TD><TD></TD></TR>
+          <TR class="even"><TD>QUEUE_ID</TD><TD></TD></TR>
+          <TR class="odd"><TD>USER_PROP</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UA_STATUS_PWS_VW"></A>3.3 - UA_STATUS_PWS_VW</H2>
+      Overzicht van de nieuwe verwerkingstatus, van de laatste 24 uur, uit de request, data en uitval tabellen.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_STATUS_PWS_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DATUMTIJD_AANMAAK</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_LAATSTE_MUTATIE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>FK_REQID</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HERKOMST</TD><TD>CHAR(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>VARCHAR2(20 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IPDCODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>MELDING</TD><TD>VARCHAR2(2000 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>PK_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>VARCHAR2(40 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DATUMTIJD_AANMAAK</TD><TD>Timestamp aanmaak onderliggend record.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_LAATSTE_MUTATIE</TD><TD>Timestamp laatste mutatie onderliggend record.</TD></TR>
+          <TR class="odd"><TD>FK_REQID</TD><TD>Bij uitval/databericht record (zie kolom HERKOMST): FK naar request tabel. Bij request record NULL.</TD></TR>
+          <TR class="even"><TD>HERKOMST</TD><TD>R=Request, D=data, U=uitval: is het record afkomstig uit UA_DATA_REQUEST_AAN_KVK / UA_DATA_BERICHT_KVK / UA_UITGEVALLEN_BERICHT.</TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>Status van het onderliggende record.</TD></TR>
+          <TR class="even"><TD>IPDCODE</TD><TD>FOUTCODE van een databericht record of de IPDCODE van een uitgevallen record. Leeg bij request records.</TD></TR>
+          <TR class="odd"><TD>MELDING</TD><TD>FOUTMELDING van een databericht record of de REDEN_UITVAL van een uitvalrecord. Leeg bij request records.</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>KvK nr.</TD></TR>
+          <TR class="odd"><TD>PK_ID</TD><TD>Het REQID/DBERID/UBERID van het onderliggende request/data/uitval record (zie kolom HERKOMST).</TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>BSN.</TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>RSIN.</TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>Aanvrager van de request.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UA_STATUS_UITVAL_VW"></A>3.4 - UA_STATUS_UITVAL_VW</H2>
+      Overzicht van de nieuwe verwerkingstatus, van de laatste 100 dagen, uit de request, data en uitval tabellen.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_STATUS_UITVAL_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DATUMTIJD_AANMAAK</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_LAATSTE_MUTATIE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>FK_REQID</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HERKOMST</TD><TD>CHAR(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>VARCHAR2(20 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IPDCODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>MELDING</TD><TD>VARCHAR2(2000 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>PK_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>VARCHAR2(40 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DATUMTIJD_AANMAAK</TD><TD>Timestamp aanmaak onderliggend record.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_LAATSTE_MUTATIE</TD><TD>Timestamp laatste mutatie onderliggend record.</TD></TR>
+          <TR class="odd"><TD>FK_REQID</TD><TD>Bij uitval/databericht record (zie kolom HERKOMST): FK naar request tabel. Bij request record NULL.</TD></TR>
+          <TR class="even"><TD>HERKOMST</TD><TD>R=Request, D=data, U=uitval: is het record afkomstig uit UA_DATA_REQUEST_AAN_KVK / UA_DATA_BERICHT_KVK / UA_UITGEVALLEN_BERICHT.</TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>Status van het onderliggende record.</TD></TR>
+          <TR class="even"><TD>IPDCODE</TD><TD>FOUTCODE van een databericht record of de IPDCODE van een uitgevallen record. Leeg bij request records.</TD></TR>
+          <TR class="odd"><TD>MELDING</TD><TD>FOUTMELDING van een databericht record of de REDEN_UITVAL van een uitvalrecord. Leeg bij request records.</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>KvK nr.</TD></TR>
+          <TR class="odd"><TD>PK_ID</TD><TD>Het REQID/DBERID/UBERID van het onderliggende request/data/uitval record (zie kolom HERKOMST).</TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>BSN.</TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>RSIN.</TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>Aanvrager van de request.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UA_STATUS_VERWERKING_VW"></A>3.5 - UA_STATUS_VERWERKING_VW</H2>
+      Overzicht van de verwerkingstatus uit de request, data en uitval tabellen.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_STATUS_VERWERKING_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DATUMTIJD_AANMAAK</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_LAATSTE_MUTATIE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>FK_REQID</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HERKOMST</TD><TD>CHAR(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>VARCHAR2(20 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IPDCODE</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>MELDING</TD><TD>VARCHAR2(2000 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>NUMBER(,)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>PK_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>VARCHAR2(40 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>DATUMTIJD_AANMAAK</TD><TD>Timestamp aanmaak onderliggend record.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_LAATSTE_MUTATIE</TD><TD>Timestamp laatste mutatie onderliggend record.</TD></TR>
+          <TR class="odd"><TD>FK_REQID</TD><TD>Bij uitval/databericht record (zie kolom HERKOMST): FK naar request tabel. Bij request record NULL.</TD></TR>
+          <TR class="even"><TD>HERKOMST</TD><TD>R=Request, D=data, U=uitval: is het record afkomstig uit UA_DATA_REQUEST_AAN_KVK / UA_DATA_BERICHT_KVK / UA_UITGEVALLEN_BERICHT.</TD></TR>
+          <TR class="odd"><TD>STATUS</TD><TD>Status van het onderliggende record.</TD></TR>
+          <TR class="even"><TD>IPDCODE</TD><TD>FOUTCODE van een databericht record of de IPDCODE van een uitgevallen record. Leeg bij request records.</TD></TR>
+          <TR class="odd"><TD>MELDING</TD><TD>FOUTMELDING van een databericht record of de REDEN_UITVAL van een uitvalrecord. Leeg bij request records.</TD></TR>
+          <TR class="even"><TD>KVK_NUMMER</TD><TD>KvK nr.</TD></TR>
+          <TR class="odd"><TD>PK_ID</TD><TD>Het REQID/DBERID/UBERID van het onderliggende request/data/uitval record (zie kolom HERKOMST).</TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>BSN.</TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>RSIN.</TD></TR>
+          <TR class="even"><TD>AANVRAGER</TD><TD>Aanvrager van de request.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UA_V_UBT_FOUT_DATABERICHT"></A>3.6 - UA_V_UBT_FOUT_DATABERICHT</H2>
+      Uitgevallen databerichten uitgezonderd IPD codes '0009', '0011', '0022'.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_V_UBT_FOUT_DATABERICHT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>VARCHAR2(4 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>Het UBERID van het uitgevallen databericht.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>Timestamp van de uitval.</TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>Berichtsoort (altijd 'D' in deze view).</TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>REQID van de request die in deze uitval resulteerde.</TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>IPD_CODE van de uitval.</TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>['N','H','V'] nieuw/historisch/verwerkt status van de uitval.</TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>Reden van de uitval.</TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>Timestamp laatste update van het uitvalrecord.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UA_V_UBT_FOUT_DATA_LTST_MND"></A>3.7 - UA_V_UBT_FOUT_DATA_LTST_MND</H2>
+      Uitgevallen databerichten uitgezonderd IPD codes '0009', '0011', '0022' in de afgelopen maand.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_V_UBT_FOUT_DATA_LTST_MND</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>VARCHAR2(4 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>Het UBERID van het uitgevallen databericht.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>Timestamp van de uitval.</TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>Berichtsoort (altijd 'D' in deze view).</TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>REQID van de request die in deze uitval resulteerde.</TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>IPD_CODE van de uitval.</TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>['N','H','V'] nieuw/historisch/verwerkt status van de uitval.</TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>Reden van de uitval.</TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>Timestamp laatste update van het uitvalrecord.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UA_V_UBT_FOUT_MUT_BERICHT"></A>3.8 - UA_V_UBT_FOUT_MUT_BERICHT</H2>
+      Uitgevallen wijzigingsignalen.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_V_UBT_FOUT_MUT_BERICHT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>VARCHAR2(4 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>Het UBERID van het uitgevallen databericht.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>Timestamp van de uitval.</TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>Berichtsoort (altijd 'W' in deze view).</TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>Altijd NULL in deze view.</TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>Altijd NULL in deze view.</TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>['N','H','V'] nieuw/historisch/verwerkt status van de uitval.</TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>Reden van de uitval.</TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>Timestamp laatste update van het uitvalrecord.</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UA_V_UBT_FOUT_MUT_LTST_MND"></A>3.9 - UA_V_UBT_FOUT_MUT_LTST_MND</H2>
+      Uitgevallen wijzigingsignalen gedurende de laatste maand.
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">UA_V_UBT_FOUT_MUT_LTST_MND</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>VARCHAR2(4 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>UBERID</TD><TD>Het UBERID van het uitgevallen databericht.</TD></TR>
+          <TR class="even"><TD>DATUMTIJD_IN_DB</TD><TD>Timestamp van de uitval.</TD></TR>
+          <TR class="odd"><TD>BERICHT_SOORT</TD><TD>Berichtsoort (altijd 'W' in deze view).</TD></TR>
+          <TR class="even"><TD>REQID</TD><TD>Altijd NULL in deze view.</TD></TR>
+          <TR class="odd"><TD>IPD_CODE</TD><TD>Altijd NULL in deze view.</TD></TR>
+          <TR class="even"><TD>STATUS_UITVAL</TD><TD>['N','H','V'] nieuw/historisch/verwerkt status van de uitval.</TD></TR>
+          <TR class="odd"><TD>REDEN_UITVAL</TD><TD>Reden van de uitval.</TD></TR>
+          <TR class="even"><TD>TS_LAATSTE_UPDATE</TD><TD>Timestamp laatste update van het uitvalrecord.</TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Procedures"></A>4 - Procedures</H1><HR>
+      <H2><A name="GET_REQUEST"></A>3.1 - GET_REQUEST</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_AANMELDING</CODE></TD><TD>OUT</TD><TD><CODE>UHRARCH.AANMELDING_TYPE</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="GRANT_SUID_TABLES_ADMIN"></A>3.2 - GRANT_SUID_TABLES_ADMIN</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_USER</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="OPHALEN_BERICHT"></A>3.3 - OPHALEN_BERICHT</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_BERID</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_SOORT</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_BERICHT</CODE></TD><TD>OUT</TD><TD><CODE>CLOB</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="PROCESS_REQUESTS"></A>3.4 - PROCESS_REQUESTS</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_AANTAL_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="PUT_REQUEST"></A>3.5 - PUT_REQUEST</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_TYPE</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_AANMELDER</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UHR01_VERSLAGLEGGING"></A>3.6 - UHR01_VERSLAGLEGGING</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_DATUM</CODE></TD><TD>IN</TD><TD><CODE>DATE</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_RAPPORTAGEBODY</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_DETAIL</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_EMAILTOELICHTING</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Functions"></A>5 - Functions</H1><HR>
+    <H1><A name="Packages"></A>6 - Packages</H1><HR>
+      <H2><A name="DEMO"></A>6.1 - DEMO</H2>
+      Function: <CODE>RETURN_RECORD</CODE> RETURN<CODE> PL/SQL RECORD</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Attribuut</TH><TH class="datatype">Datatype</TH></TR></THEAD>
+        <BODY>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>RETURN_TYPE</CODE> RETURN<CODE> OBJECT</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UHR01_UITVAL_BERICHTEN"></A>6.2 - UHR01_UITVAL_BERICHTEN</H2>
+      Procedure: <CODE>GETNEXT</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_STARTTIJD_IN_DB</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_EINDTIJD_IN_DB</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_GEVONDEN_ID</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_UITGEVALLEN_BERICHT</CODE></TD><TD>OUT</TD><TD><CODE>CLOB</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>GETSTARTTIJDHERSTELACTIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_STARTTIJD_HERSTELACTIE</CODE></TD><TD>IN/OUT</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UHR02_KVK_BERICHTEN"></A>6.3 - UHR02_KVK_BERICHTEN</H2>
+      Procedure: <CODE>GETNEXTREQUEST</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_GEVONDEN_SLEUTEL</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_REQID</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_RSIN</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_BSN</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="VERWERK_KVK_WIJZIGING"></A>6.4 - VERWERK_KVK_WIJZIGING</H2>
+      Procedure: <CODE>P_BEPAAL_DATA_RELEVANTIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_BERICHTID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>P_BEPAAL_DATA_RELEVANTIE_ROWID</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_ROWID</CODE></TD><TD>IN</TD><TD><CODE>ROWID</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>P_BEPAAL_POPULATIE_RELEVANT</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_BERICHTID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>P_BEPAAL_POPUL_RELEV_ROWID</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_ROWID</CODE></TD><TD>IN</TD><TD><CODE>ROWID</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>P_INSERT_REQ_KVK_ROWID</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_ROWID</CODE></TD><TD>IN</TD><TD><CODE>ROWID</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+  </BODY>
+</HTML>
+    <H1><A name="Sequences"></A>7 - Sequences</H1><HR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Sequence</TH><TH class="datatype">Min value</TH><TH class="datatype">Max value</TH><TH class="datatype">Increment by</TH><TH class="datatype">Cache size</TH><TH class="datatype">Cycle flag</TH><TH class="datatype">Order flag</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>UHR_DBK_SEQ</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>                  40.000.000</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>0</CODE></TD><TD><CODE>N</CODE></TD><TD><CODE>N</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHR_DRK_SEQ</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>                  40.000.000</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>0</CODE></TD><TD><CODE>N</CODE></TD><TD><CODE>N</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHR_KWS_SEQ</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>                  40.000.000</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>0</CODE></TD><TD><CODE>N</CODE></TD><TD><CODE>N</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHR_UBT_SEQ</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>                  40.000.000</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>0</CODE></TD><TD><CODE>N</CODE></TD><TD><CODE>N</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Synonyms"></A>8 - Synonyms</H1><HR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Synonym</TH><TH class="datatype">Object owner</TH><TH class="datatype">Object name</TH><TH class="datatype">Database link</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Grants_received"></A>9 - Grants received</H1><HR>
+    <H2><A name="SYS_grants_received"></A>9.1 - SYS grants</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Privilege</TH><TH class="kolomnaam">Admin option</TH></TR></THEAD>
+        <TBODY>
+          <TR class="even"><TD><CODE>CREATE SYNONYM</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>CREATE VIEW</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H2><A name="Object_grants_received"></A>9.2 - Grants on user objects</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Owner</TH><TH class="kolomnaam">Object name</TH><TH class="kolomnaam">Privilege</TH><TH class="kolomnaam">Grantable</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>SCALAADMIN</CODE></TD><TD><CODE>GRANT_SUID_TABLES_ADMIN_</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SYS</CODE></TD><TD><CODE>DBMS_AQ</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SYS</CODE></TD><TD><CODE>DBMS_AQ_BQVIEW</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SYS</CODE></TD><TD><CODE>QT88249_BUFFER</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UHR_WACHTKAMER_PCK</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+  </BODY>
+</HTML>

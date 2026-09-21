@@ -1,0 +1,1063 @@
+<HTML>
+  <HEAD>
+    <TITLE>TDM voor schema WTS</TITLE>
+    <LINK href="HTML2Word.css" rel="STYLESHEET" type="text/css">
+  </HEAD>
+  <BODY>
+    <MARQUEE>Deze code is nog niet uitontwikkeld !!!</MARQUEE>
+    <BR><DIV class="titel">Technisch datamodel voor schema <CODE>WTS</CODE></DIV>
+    <BR><DIV class="colofon">Versienummer: <CODE>1.6.4</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd op <CODE>2026/06/25 11:35:39</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd door de HTML2Word <CODE>FUNCTION</CODE> <CODE>GET_TAB_TF</CODE></DIV>
+    <BR><DIV class="colofon">Tabelbreedtes zijn geoptimaliseerd voor copy&amp;paste naar A4 formaat documenten in Word</DIV>
+    <H1>1 - Inhoudsopgave</H1><HR>
+      <A href="#Tabellen">2 - Tabellen</A>
+      <BR><SMALL><A href="#WTS_ADRES">2.1 - WTS_ADRES</A></SMALL>
+      <BR><SMALL><A href="#WTS_ADRES_STRUCT">2.2 - WTS_ADRES_STRUCT</A></SMALL>
+      <BR><SMALL><A href="#WTS_AEH">2.3 - WTS_AEH</A></SMALL>
+      <BR><SMALL><A href="#WTS_NNP_RVM_HIS">2.4 - WTS_NNP_RVM_HIS</A></SMALL>
+      <BR><SMALL><A href="#WTS_PARAMETERS">2.5 - WTS_PARAMETERS</A></SMALL>
+      <BR><SMALL><A href="#WTS_PERSOON">2.6 - WTS_PERSOON</A></SMALL>
+      <BR><A href="#Views">3 - Views</A>
+      <BR><SMALL><A href="#WTS_ADRES_STRUCT_TEST_VW">3.1 - WTS_ADRES_STRUCT_TEST_VW</A></SMALL>
+      <BR><SMALL><A href="#WTS_ADRES_STRUCT_VW">3.2 - WTS_ADRES_STRUCT_VW</A></SMALL>
+      <BR><SMALL><A href="#WTS_ADRES_TEST_VW">3.3 - WTS_ADRES_TEST_VW</A></SMALL>
+      <BR><SMALL><A href="#WTS_ADRES_VW">3.4 - WTS_ADRES_VW</A></SMALL>
+      <BR><SMALL><A href="#WTS_NNP_RVM_HIS_TEST_VW">3.5 - WTS_NNP_RVM_HIS_TEST_VW</A></SMALL>
+      <BR><SMALL><A href="#WTS_NNP_RVM_HIS_VW">3.6 - WTS_NNP_RVM_HIS_VW</A></SMALL>
+      <BR><A href="#Procedures">4 - Procedures</A>
+      <BR><SMALL><A href="#GRANT_SUID_TABLES_ADMIN">4.1 - GRANT_SUID_TABLES_ADMIN</A></SMALL>
+      <BR><A href="#Functions">5 - Functions</A>
+      <BR><SMALL><A href="#WTS_GET_PARAMETER">5.1 - WTS_GET_PARAMETER</A></SMALL>
+      <BR><SMALL><A href="#WTS_UHR2WTS_DATUM_AANVANG">5.2 - WTS_UHR2WTS_DATUM_AANVANG</A></SMALL>
+      <BR><SMALL><A href="#WTS_UHR2WTS_DATUM_EINDE">5.3 - WTS_UHR2WTS_DATUM_EINDE</A></SMALL>
+      <BR><A href="#Packages">6 - Packages</A>
+      <BR><SMALL><A href="#WTS_SYNC">6.1 - WTS_SYNC</A></SMALL>
+      <BR><A href="#Sequences">7 - Sequences</A>
+      <BR><A href="#Synonyms">8 - Synonyms</A>
+      <BR><A href="#Grants_received">9 - Grants received</A>
+      <BR><SMALL><A href="#SYS_grants_received">9.1 - SYS grants</A></SMALL>
+      <BR><SMALL><A href="#Object_grants_received">9.2 - Grants on user objects</A></SMALL>
+    <H1><A name="Tabellen"></A>2 - Tabellen</H1><HR>
+      <H2><A name="WTS_ADRES"></A>2.1 - WTS_ADRES</H2>
+      Kopie van WGA ADRES tabel, plus extra UHR elementen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_ADRES</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">WAS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Waterscheiding versie van WGA tabel WGA_ADRES</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AEH_ID</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ADRESROL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HUISNR</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HUISNR_TOEV</TD><TD>VARCHAR2(4 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>NUMBER(5,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>GEMEENTENAAM</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>VARCHAR2(70 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>B_ADRESREGEL</TD><TD>VARCHAR2(34 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>B_WOONPL_LANDREGEL</TD><TD>VARCHAR2(35 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WOONBOOT_CODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONWAGEN_CODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LANDCODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ADRESTYPEK33</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ANTWOORDNUMMER</TD><TD>NUMBER(10,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_HERKOMST_TYPE</TD><TD>VARCHAR2(6 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WTS_HERKOMST_TS</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_HERKOMST_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WTS_HERKOMST_BIN_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_HERKOMST_BUIT_ID</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WTS_HERKOMST_WGA_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_BATCH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WTS_BATCH_TS</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_BATCHNUMMER</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IND_AFGEKAPT_B_ADRESREGEL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="odd"><TD>IND_AFGEKAPT_B_WOONPL_LANDREGE</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="even"><TD>IND_AFGEKAPT_STRAATNAAM</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="odd"><TD>IND_AFGEKAPT_HUISNR_TOEV</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="even"><TD>IND_AFGEKAPT_REGIONAAM</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>Unieke (technische) identificatie van een Adres</TD></TR>
+          <TR class="even"><TD>AEH_ID</TD><TD>Unieke (technische) identificatie van een Administratieve eenheid</TD></TR>
+          <TR class="odd"><TD>ADRESROL</TD><TD>Code die de rol van het adres aangeeft</TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>Geldig vanaf (dag)</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>Datum einde</TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>Straatnaam</TD></TR>
+          <TR class="odd"><TD>HUISNR</TD><TD>De numerieke aanduiding zoals deze door de gemeente aan het object is toegekend</TD></TR>
+          <TR class="even"><TD>HUISNR_TOEV</TD><TD>De alfanumerieke aanduiding achter het huisnummer, zoals toegekend door de gemeente</TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>De numerieke aanduiding zoals deze door de Nederlandse PTT is vastgesteld voor postbusadressen</TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>De binnenlands of buitenlandse postcode</TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>De door de gemeente vastgestelde naam van een woonplaats</TD></TR>
+          <TR class="even"><TD>GEMEENTENAAM</TD><TD>Gemeentenaam conform BvR systeem van de Belastingdienst</TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>Een nadere aanduiding bij de straatnaam en - indien aanwezig - het huisnummer of bij "Postbus" en postbusnummer, dan wel "Antwoordnummer" en antwoordnummer</TD></TR>
+          <TR class="even"><TD>B_ADRESREGEL</TD><TD>Adresregel buitenland (ongestructureerd)</TD></TR>
+          <TR class="odd"><TD>B_WOONPL_LANDREGEL</TD><TD>Woonplaats en landaanduiding buitenland (ongestructureerd)</TD></TR>
+          <TR class="even"><TD>WOONBOOT_CODE</TD><TD>Woonbootverwijzing</TD></TR>
+          <TR class="odd"><TD>WOONWAGEN_CODE</TD><TD>Woonwagen verwijzing</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Transaktie geldig vanaf</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Transaktie geldig tot</TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>Regionaam van een adres</TD></TR>
+          <TR class="odd"><TD>LANDCODE</TD><TD>De code van een huidig land of gebiedsdeel conform ISO 3166-1</TD></TR>
+          <TR class="even"><TD>ADRESTYPEK33</TD><TD>Type straatadres/ postbusadres binnenland en straatadres buitenland in K33 bericht</TD></TR>
+          <TR class="odd"><TD>ANTWOORDNUMMER</TD><TD>Antwoordnummer</TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>Instantie of persoon van wie men informatie krijgt</TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>Fiscaal Nummer uit WGA_PERSOON is gemapped naar RSIN in UHR</TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>SOFINR uit WGA_PERSOON is gemapped naar BSN in UHR</TD></TR>
+          <TR class="odd"><TD>WTS_HERKOMST_TYPE</TD><TD>Het originele adres type uit UHR en WGA</TD></TR>
+          <TR class="even"><TD>WTS_HERKOMST_TS</TD><TD>De HIS_TS_IN van het adres uit UHR</TD></TR>
+          <TR class="odd"><TD>WTS_HERKOMST_ID</TD><TD>Het LOCATIE_ID van dit adres komt uit UHR tabel UH_LOCATIE</TD></TR>
+          <TR class="even"><TD>WTS_HERKOMST_BIN_ID</TD><TD>Het ADRES_BIN_ID van het binnenlands adres in UH_LOCATIE</TD></TR>
+          <TR class="odd"><TD>WTS_HERKOMST_BUIT_ID</TD><TD>Het ADRES_BUIT_ID van het buitenlands adres in UH_LOCATIE</TD></TR>
+          <TR class="even"><TD>WTS_HERKOMST_WGA_ID</TD><TD>Het ADRES_ID komt uit de WGA_ADRES tabel</TD></TR>
+          <TR class="odd"><TD>WTS_BATCH_ID</TD><TD>BATCH_ID komt uit SCALADIV</TD></TR>
+          <TR class="even"><TD>WTS_BATCH_TS</TD><TD>Timestamp van de batch</TD></TR>
+          <TR class="odd"><TD>WTS_BATCHNUMMER</TD><TD>WTS batch nummer voor synchronisatie</TD></TR>
+          <TR class="even"><TD>IND_AFGEKAPT_B_ADRESREGEL</TD><TD>['J','N'] Indicatie of de inhoud van kolom B_ADRESREGEL afgekapt is</TD></TR>
+          <TR class="odd"><TD>IND_AFGEKAPT_B_WOONPL_LANDREGE</TD><TD>['J','N'] Indicatie of de inhoud van kolom B_WOONPL_LANDREGEL afgekapt is</TD></TR>
+          <TR class="even"><TD>IND_AFGEKAPT_STRAATNAAM</TD><TD>['J','N'] Indicatie of de inhoud van kolom STRAATNAAM afgekapt is</TD></TR>
+          <TR class="odd"><TD>IND_AFGEKAPT_HUISNR_TOEV</TD><TD>['J','N'] Indicatie of de inhoud van kolom HUISNR_TOEV afgekapt is</TD></TR>
+          <TR class="even"><TD>IND_AFGEKAPT_REGIONAAM</TD><TD>['J','N'] Indicatie of de inhoud van kolom REGIONAAM afgekapt is</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>WAS_PK(ADR_ID)</CODE>
+      <H2><A name="WTS_ADRES_STRUCT"></A>2.2 - WTS_ADRES_STRUCT</H2>
+      Gestructureerde buitenlandse adressen
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_ADRES_STRUCT</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">WASS</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Waterscheiding versie van WGA tabel WGA_ADRES_STRUCT</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTCODE</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HUISNR</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>VARCHAR2(70 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LANDCODE_ISO</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>VARCHAR2(7 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ADRESTYPESTRUCT</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_BATCH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WTS_BATCH_TS</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_BATCHNUMMER</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>Unieke (technische) identificatie van een Adres</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Transaktie geldig vanaf</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Transaktie geldig tot</TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>Straatnaam</TD></TR>
+          <TR class="odd"><TD>POSTCODE</TD><TD>De binnenlands of buitenlandse postcode</TD></TR>
+          <TR class="even"><TD>HUISNR</TD><TD>De numerieke aanduiding zoals deze door de gemeente aan het object is toegekend</TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>De door de gemeente vastgestelde naam van een woonplaats</TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>Regionaam van een buitenlands adres</TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>Een nadere aanduiding bij de straatnaam en - indien aanwezig - het huisnummer of bij "Postbus" en postbusnummer, dan wel "Antwoordnummer" en antwoordnummer</TD></TR>
+          <TR class="even"><TD>LANDCODE_ISO</TD><TD>De code van een huidig land of gebiedsdeel conform ISO 3166-1</TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>De numerieke aanduiding zoals deze door de Nederlandse PTT is vastgesteld voor postbusadressen</TD></TR>
+          <TR class="even"><TD>ADRESTYPESTRUCT</TD><TD>Type straatadres/ postbusadres binnenland en straatadres buiteland</TD></TR>
+          <TR class="odd"><TD>WTS_BATCH_ID</TD><TD>BATCH_ID komt uit SCALADIV</TD></TR>
+          <TR class="even"><TD>WTS_BATCH_TS</TD><TD>Timestamp van de batch</TD></TR>
+          <TR class="odd"><TD>WTS_BATCHNUMMER</TD><TD>WTS batch nummer voor synchronisatie</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>WTS_ADRES_STRUCT_PK(ADR_ID,HIS_TS_IN)</CODE>
+      <BR>Foreign key constraint <CODE>WTS_ADRES_STRUCT_WTS_ADRE_FK1(ADR_ID)</CODE> references constraint <CODE>WTS.WAS_PK</CODE>
+      <H2><A name="WTS_AEH"></A>2.3 - WTS_AEH</H2>
+      Administratieve Eenheid in WTS
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_AEH</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">WAEH</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Waterscheiding versie van WGA tabel WGA_AEH</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>AEH_ID</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IND_AANWEZIG_IN_UHR</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="odd"><TD>BATCH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BATCH_TS</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BATCHNUMMER</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATUM_AANV_OF_EIND_IN_TOEKOMST</TD><TD>DATE</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>AEH_ID</TD><TD>Unieke (technische) identificatie van de Administratieve eenheid</TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>Fiscaal Nummer uit WGA_PERSOON is gemapped naar RSIN in UHR</TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>SOFINR uit WGA_PERSOON is gemapped naar BSN in UHR</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Administratieve Eenheid aanwezig vanaf</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Administratieve Eenheid aanwezig tot</TD></TR>
+          <TR class="even"><TD>IND_AANWEZIG_IN_UHR</TD><TD>Is instantie of persoon aanwezig in UHR</TD></TR>
+          <TR class="odd"><TD>BATCH_ID</TD><TD>BATCH_ID komt uit SCALADIV</TD></TR>
+          <TR class="even"><TD>BATCH_TS</TD><TD>Timestamp van de batch</TD></TR>
+          <TR class="odd"><TD>BATCHNUMMER</TD><TD>WTS batch nummer voor synchronisatie</TD></TR>
+          <TR class="even"><TD>DATUM_AANV_OF_EIND_IN_TOEKOMST</TD><TD>De eerstvolgende DATUM_AANVANG of DATUM_EINDE die in de toekomst ligt</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>WTS_AEH_PK(AEH_ID,HIS_TS_IN)</CODE>
+      <H2><A name="WTS_NNP_RVM_HIS"></A>2.4 - WTS_NNP_RVM_HIS</H2>
+      Historie rechtsvorm niet natuurlijk persoon
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_NNP_RVM_HIS</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">WNRH</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Waterscheiding versie van WGA tabel WGA_NNP_RVM_HIS</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RVM_CODE</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRRECHTSVRM</TD><TD>VARCHAR2(100 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_BATCH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WTS_BATCH_TS</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WTS_BATCHNUMMER</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>Unieke (technische) Identificatie van een persoon</TD></TR>
+          <TR class="even"><TD>RVM_CODE</TD><TD>Code rechtsvorm van een Inhoudingsplichtige</TD></TR>
+          <TR class="odd"><TD>OMSCHRRECHTSVRM</TD><TD>Omschrijving (buitenlandse) rechtsvorm die niet met RVM_CODE kan worden aangegeven</TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>Geldig vanaf (dag)</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>Datum einde</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Transaktie geldig vanaf</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Transaktie geldig tot</TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>Instantie of persoon van wie men informatie krijgt</TD></TR>
+          <TR class="odd"><TD>RSIN</TD><TD>Fiscaal Nummer uit WGA_PERSOON is gemapped naar RSIN in UHR</TD></TR>
+          <TR class="even"><TD>BSN</TD><TD>SOFINR uit WGA_PERSOON is gemapped naar BSN in UHR</TD></TR>
+          <TR class="odd"><TD>WTS_BATCH_ID</TD><TD>BATCH_ID komt uit SCALADIV</TD></TR>
+          <TR class="even"><TD>WTS_BATCH_TS</TD><TD>Timestamp van de batch</TD></TR>
+          <TR class="odd"><TD>WTS_BATCHNUMMER</TD><TD>WTS batch nummer voor synchronisatie</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>WTS_NNP_RVM_HIS_PK(PER_ID,DATAANV,HIS_TS_IN)</CODE>
+      <H2><A name="WTS_PARAMETERS"></A>2.5 - WTS_PARAMETERS</H2>
+      WTS applicatie parameters
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_PARAMETERS</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">PMR</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Parameters t.b.v. de Waterscheiding</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PARAM_ID</TD><TD>NUMBER(3,0)</TD><TD>NOT NULL</TD><TD>WTS.WTS_PARAMETERS_seq.nextval </TD></TR>
+          <TR class="even"><TD>NAAM</TD><TD>VARCHAR2(50 CHAR)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATSTART</TD><TD>NUMBER(8,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WAARDE</TD><TD>VARCHAR2(500 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PARAM_ID</TD><TD>Unieke gegenereerde sleutel van de tabel</TD></TR>
+          <TR class="even"><TD>NAAM</TD><TD>De naam van de parameter</TD></TR>
+          <TR class="odd"><TD>DATSTART</TD><TD>Start datum voor de geldigheid van de parameter</TD></TR>
+          <TR class="even"><TD>DATEIND</TD><TD>Eind datum voor de geldigheid van de parameter</TD></TR>
+          <TR class="odd"><TD>WAARDE</TD><TD>De waarde van de parameter</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>PMR_PK(PARAM_ID)</CODE>
+      <BR>Unique key constraint <CODE>PMR_UK1(NAAM,DATSTART)</CODE>
+      <H2><A name="WTS_PERSOON"></A>2.6 - WTS_PERSOON</H2>
+      Persoon in WTS
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_PERSOON</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde">WPER</TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde">Waterscheiding versie van WGA tabel WGA_PERSOON</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>NUMBER(12,0)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NOT NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>IND_AANWEZIG_IN_UHR</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="odd"><TD>IND_RECHTSVORM_IN_UHR</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NOT NULL</TD><TD>'N' </TD></TR>
+          <TR class="even"><TD>BATCH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>BATCH_TS</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BATCHNUMMER</TD><TD>NUMBER(9,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATUM_AANV_OF_EIND_IN_TOEKOMST</TD><TD>DATE</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>Unieke (technische) identificatie van de Persoon</TD></TR>
+          <TR class="even"><TD>RSIN</TD><TD>Fiscaal Nummer uit WGA_PERSOON is gemapped naar RSIN in UHR</TD></TR>
+          <TR class="odd"><TD>BSN</TD><TD>SOFINR uit WGA_PERSOON is gemapped naar BSN in UHR</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Persoon aanwezig vanaf</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Persoon aanwezig tot</TD></TR>
+          <TR class="even"><TD>IND_AANWEZIG_IN_UHR</TD><TD>Is instantie of natuurlijk persoon aanwezig in UHR</TD></TR>
+          <TR class="odd"><TD>IND_RECHTSVORM_IN_UHR</TD><TD>Is er een rechtsvorm voor de instantie aanwezig in UHR</TD></TR>
+          <TR class="even"><TD>BATCH_ID</TD><TD>BATCH_ID komt uit SCALADIV</TD></TR>
+          <TR class="odd"><TD>BATCH_TS</TD><TD>Timestamp van de batch</TD></TR>
+          <TR class="even"><TD>BATCHNUMMER</TD><TD>WTS batch nummer voor synchronisatie</TD></TR>
+          <TR class="odd"><TD>DATUM_AANV_OF_EIND_IN_TOEKOMST</TD><TD>De eerstvolgende DATUM_AANVANG of DATUM_EINDE die in de toekomst ligt</TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Primary key constraint <CODE>WTS_PERSOON_PK(PER_ID,HIS_TS_IN)</CODE>
+    <H1><A name="Views"></A>3 - Views</H1><HR>
+      <H2><A name="WTS_ADRES_STRUCT_TEST_VW"></A>3.1 - WTS_ADRES_STRUCT_TEST_VW</H2>
+      Waterscheiding test view met WGA_ADRES_STRUCT data verrijkt met UHR data
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_ADRES_STRUCT_TEST_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTCODE</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HUISNR</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>VARCHAR2(70 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LANDCODE_ISO</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>VARCHAR2(7 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ADRESTYPESTRUCT</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SRC</TD><TD>CHAR(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>ADR_ID uit WTS</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Timestamp waarop dit record is aangemaakt</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Timestamp waarop dit record is beëindigd</TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>STRAATNAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>POSTCODE</TD><TD>POSTCODE uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HUISNR</TD><TD>HUISNR uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>WOONPLAATS uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>REGIONAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>LOCATIE_OMSCH uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>LANDCODE_ISO</TD><TD>LANDCODE_ISO uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>POSTBUSNR uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>ADRESTYPESTRUCT</TD><TD>ADRESTYPESTRUCT uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>SRC</TD><TD>Source van dit record: WGA of WTS</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="WTS_ADRES_STRUCT_VW"></A>3.2 - WTS_ADRES_STRUCT_VW</H2>
+      Waterscheiding view met WGA_ADRES_STRUCT data verrijkt met UHR data
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_ADRES_STRUCT_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTCODE</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HUISNR</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>VARCHAR2(70 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>LANDCODE_ISO</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>VARCHAR2(7 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ADRESTYPESTRUCT</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>ADR_ID uit WTS</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Timestamp waarop dit record is aangemaakt</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Timestamp waarop dit record is beëindigd</TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>STRAATNAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>POSTCODE</TD><TD>POSTCODE uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HUISNR</TD><TD>HUISNR uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>WOONPLAATS uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>REGIONAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>LOCATIE_OMSCH uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>LANDCODE_ISO</TD><TD>LANDCODE_ISO uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>POSTBUSNR uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>ADRESTYPESTRUCT</TD><TD>ADRESTYPESTRUCT uit WGA of UHR</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="WTS_ADRES_TEST_VW"></A>3.3 - WTS_ADRES_TEST_VW</H2>
+      Waterscheiding test view met WGA_ADRES data verrijkt met UHR data
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_ADRES_TEST_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AEH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ADRESROL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HUISNR</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HUISNR_TOEV</TD><TD>VARCHAR2(4 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>NUMBER(5,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>GEMEENTENAAM</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>VARCHAR2(70 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>B_ADRESREGEL</TD><TD>VARCHAR2(34 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>B_WOONPL_LANDREGEL</TD><TD>VARCHAR2(35 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WOONBOOT_CODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONWAGEN_CODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LANDCODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ADRESTYPEK33</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ANTWOORDNUMMER</TD><TD>NUMBER(10,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SRC</TD><TD>CHAR(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>ADR_ID uit WTS</TD></TR>
+          <TR class="even"><TD>AEH_ID</TD><TD>AEH_ID uit WGA</TD></TR>
+          <TR class="odd"><TD>ADRESROL</TD><TD>ADRESROL uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>DATEAANV uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>DATEIND uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>STRAATNAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>HUISNR</TD><TD>HUISNR uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HUISNR_TOEV</TD><TD>HUISNR_TOEV uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>POSTBUSNR uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>POSTCODE uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>WOONPLAATS uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>GEMEENTENAAM</TD><TD>GEMEENTENAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>LOCATIE_OMSCH uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>B_ADRESREGEL</TD><TD>B_ADRESREGEL uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>B_WOONPL_LANDREGEL</TD><TD>B_WOONPL_LANDREGEL uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>WOONBOOT_CODE</TD><TD>WOONBOOT_CODE uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>WOONWAGEN_CODE</TD><TD>WOONWAGEN_CODE uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Timestamp waarop dit record is aangemaakt</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Timestamp waarop dit record is beëindigd</TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>REGIONAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>LANDCODE</TD><TD>LANDCODE uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>ADRESTYPEK33</TD><TD>ADRESTYPEK33 uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>ANTWOORDNUMMER</TD><TD>ANTWOORDNUMMER uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>Herkomst (WGA of UHR) van de data in dit record</TD></TR>
+          <TR class="odd"><TD>SRC</TD><TD>Source van dit record: WGA of WTS</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="WTS_ADRES_VW"></A>3.4 - WTS_ADRES_VW</H2>
+      Waterscheiding view met WGA_ADRES data verrijkt met UHR data
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_ADRES_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>AEH_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ADRESROL</TD><TD>VARCHAR2(1 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HUISNR</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HUISNR_TOEV</TD><TD>VARCHAR2(4 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>NUMBER(5,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>VARCHAR2(9 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>VARCHAR2(80 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>GEMEENTENAAM</TD><TD>VARCHAR2(60 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>VARCHAR2(70 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>B_ADRESREGEL</TD><TD>VARCHAR2(34 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>B_WOONPL_LANDREGEL</TD><TD>VARCHAR2(35 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>WOONBOOT_CODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>WOONWAGEN_CODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>VARCHAR2(24 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>LANDCODE</TD><TD>VARCHAR2(2 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>ADRESTYPEK33</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>ANTWOORDNUMMER</TD><TD>NUMBER(10,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>ADR_ID</TD><TD>ADR_ID uit WTS</TD></TR>
+          <TR class="even"><TD>AEH_ID</TD><TD>AEH_ID uit WGA</TD></TR>
+          <TR class="odd"><TD>ADRESROL</TD><TD>ADRESROL uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>DATEAANV uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>DATEIND uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>STRAATNAAM</TD><TD>STRAATNAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>HUISNR</TD><TD>HUISNR uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HUISNR_TOEV</TD><TD>HUISNR_TOEV uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>POSTBUSNR</TD><TD>POSTBUSNR uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>POSTCODE</TD><TD>POSTCODE uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>WOONPLAATS</TD><TD>WOONPLAATS uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>GEMEENTENAAM</TD><TD>GEMEENTENAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>LOCATIE_OMSCH</TD><TD>LOCATIE_OMSCH uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>B_ADRESREGEL</TD><TD>B_ADRESREGEL uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>B_WOONPL_LANDREGEL</TD><TD>B_WOONPL_LANDREGEL uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>WOONBOOT_CODE</TD><TD>WOONBOOT_CODE uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>WOONWAGEN_CODE</TD><TD>WOONWAGEN_CODE uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Timestamp waarop dit record is aangemaakt</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Timestamp waarop dit record is beëindigd</TD></TR>
+          <TR class="even"><TD>REGIONAAM</TD><TD>REGIONAAM uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>LANDCODE</TD><TD>LANDCODE uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>ADRESTYPEK33</TD><TD>ADRESTYPEK33 uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>ANTWOORDNUMMER</TD><TD>ANTWOORDNUMMER uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>Herkomst (WGA of UHR) van de data in dit record</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="WTS_NNP_RVM_HIS_TEST_VW"></A>3.5 - WTS_NNP_RVM_HIS_TEST_VW</H2>
+      Waterscheiding test view met WGA_NNP_TVM_HIS data verrijkt met UHR data
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_NNP_RVM_HIS_TEST_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RVM_CODE</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRRECHTSVRM</TD><TD>VARCHAR2(100 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>SRC</TD><TD>CHAR(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>PER_ID uit WGA</TD></TR>
+          <TR class="even"><TD>RVM_CODE</TD><TD>RVM_CODE uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>OMSCHRRECHTSVRM</TD><TD>OMSCHRRECHTSVRM uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>DATEAANV uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>DATEIND uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Timestamp waarop dit record is aangemaakt</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Timestamp waarop dit record is beëindigd</TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>Herkomst (WGA of UHR) van de data in dit record</TD></TR>
+          <TR class="odd"><TD>SRC</TD><TD>Source van dit record: WGA of WTS</TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="WTS_NNP_RVM_HIS_VW"></A>3.6 - WTS_NNP_RVM_HIS_VW</H2>
+      Waterscheiding view met WGA_NNP_TVM_HIS data verrijkt met UHR data
+      <TABLE>
+        <TBODY>
+          <TR><TD class="label">Table Name</TD><TD class="waarde">WTS_NNP_RVM_HIS_VW</TD></TR>
+          <TR><TD class="label">Abbreviation</TD><TD class="waarde"></TD></TR>
+          <TR><TD class="label">Description</TD><TD class="waarde"></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomdefinities
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="datatype">Datatype</TH><TH class="nullnotnull">N/NN</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>NUMBER(12,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>RVM_CODE</TD><TD>VARCHAR2(3 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>OMSCHRRECHTSVRM</TD><TD>VARCHAR2(100 CHAR)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>NUMBER(8,0)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>TIMESTAMP(6)</TD><TD>NULL</TD><TD></TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>VARCHAR2(10 BYTE)</TD><TD>NULL</TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <BR>Kolomcommentaar
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Kolomnaam</TH><TH class="commentaar">Commentaar</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD>PER_ID</TD><TD>PER_ID uit WGA</TD></TR>
+          <TR class="even"><TD>RVM_CODE</TD><TD>RVM_CODE uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>OMSCHRRECHTSVRM</TD><TD>OMSCHRRECHTSVRM uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>DATAANV</TD><TD>DATEAANV uit WGA of UHR</TD></TR>
+          <TR class="odd"><TD>DATEIND</TD><TD>DATEIND uit WGA of UHR</TD></TR>
+          <TR class="even"><TD>HIS_TS_IN</TD><TD>Timestamp waarop dit record is aangemaakt</TD></TR>
+          <TR class="odd"><TD>HIS_TS_END</TD><TD>Timestamp waarop dit record is beëindigd</TD></TR>
+          <TR class="even"><TD>BRON</TD><TD>Herkomst (WGA of UHR) van de data in dit record</TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Procedures"></A>4 - Procedures</H1><HR>
+      <H2><A name="GRANT_SUID_TABLES_ADMIN"></A>3.1 - GRANT_SUID_TABLES_ADMIN</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_USER</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Functions"></A>5 - Functions</H1><HR>
+      <H2><A name="WTS_GET_PARAMETER"></A>4.1 - WTS_GET_PARAMETER</H2>
+      Function <CODE>WTS_GET_PARAMETER</CODE> RETURN <CODE>VARCHAR2</CODE>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_PARAMETER_NAME</CODE></TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_PEIL_DATUM</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="WTS_UHR2WTS_DATUM_AANVANG"></A>4.2 - WTS_UHR2WTS_DATUM_AANVANG</H2>
+      Function <CODE>WTS_UHR2WTS_DATUM_AANVANG</CODE> RETURN <CODE>NUMBER</CODE>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_DATUM_AANVANG</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_DATUM_AANVANG_CGM</CODE></TD><TD><CODE>DATE</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_HIS_TS_IN</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="WTS_UHR2WTS_DATUM_EINDE"></A>4.3 - WTS_UHR2WTS_DATUM_EINDE</H2>
+      Function <CODE>WTS_UHR2WTS_DATUM_EINDE</CODE> RETURN <CODE>NUMBER</CODE>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_DATUM_EINDE</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_DATUM_EINDE_CGM</CODE></TD><TD><CODE>DATE</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Packages"></A>6 - Packages</H1><HR>
+      <H2><A name="WTS_SYNC"></A>6.1 - WTS_SYNC</H2>
+      Procedure: <CODE>GET_VERSIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_VERSIE</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>INIT_SYNCHRONISATIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_SIZE</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_TS_HERSTART</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_INGANGSDATUM</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_AANTAL_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_SYNCHRONISATIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_SYNCHRONISATIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_SYNCHRONISATIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_SIZE</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_TS_HERSTART</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_AANTAL_ADRES_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_AANTAL_ADRES_STRUCT_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_AANTAL_RECHTSVORM_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>TEST_SYNCHRONISATIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_SIZE</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_TS_HERSTART</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_AANTAL_ADRES_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_AANTAL_ADRES_STRUCT_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_AANTAL_RECHTSVORM_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>TEST_INTERVAL</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>TEST_TIMESTAMP</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+  </BODY>
+</HTML>
+    <H1><A name="Sequences"></A>7 - Sequences</H1><HR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Sequence</TH><TH class="datatype">Min value</TH><TH class="datatype">Max value</TH><TH class="datatype">Increment by</TH><TH class="datatype">Cache size</TH><TH class="datatype">Cycle flag</TH><TH class="datatype">Order flag</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>WTS_ADRES_SEQ</CODE></TD><TD class="number"><CODE>4000000000</CODE></TD><TD class="number"><CODE>               8.000.000.000</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>0</CODE></TD><TD><CODE>N</CODE></TD><TD><CODE>N</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WTS_BATCH_SEQ</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>                   4.000.000</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>0</CODE></TD><TD><CODE>N</CODE></TD><TD><CODE>N</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WTS_PARAMETERS_SEQ</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>                     400.000</CODE></TD><TD class="number"><CODE>1</CODE></TD><TD class="number"><CODE>0</CODE></TD><TD><CODE>N</CODE></TD><TD><CODE>N</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Synonyms"></A>8 - Synonyms</H1><HR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Synonym</TH><TH class="datatype">Object owner</TH><TH class="datatype">Object name</TH><TH class="datatype">Database link</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Grants_received"></A>9 - Grants received</H1><HR>
+    <H2><A name="SYS_grants_received"></A>9.1 - SYS grants</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Privilege</TH><TH class="kolomnaam">Admin option</TH></TR></THEAD>
+        <TBODY>
+          <TR class="even"><TD><CODE>CREATE SESSION</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>CREATE TABLE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H2><A name="Object_grants_received"></A>9.2 - Grants on user objects</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Owner</TH><TH class="kolomnaam">Object name</TH><TH class="kolomnaam">Privilege</TH><TH class="kolomnaam">Grantable</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALAWGA</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_ADRES_STRUCT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="even"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_AEH_HIS</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_NNP_RVM_HIS</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>QUERY REWRITE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>READ</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>DEBUG</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>FLASHBACK</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>REFERENCES</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>ON COMMIT REFRESH</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>ALTER</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>WGACORE</CODE></TD><TD><CODE>WGA_PERSOON</CODE></TD><TD><CODE>INDEX</CODE></TD><TD><CODE>YES</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+  </BODY>
+</HTML>

@@ -1,0 +1,727 @@
+<HTML>
+  <HEAD>
+    <TITLE>TDM voor schema UHR_LADEN</TITLE>
+    <LINK href="HTML2Word.css" rel="STYLESHEET" type="text/css">
+  </HEAD>
+  <BODY>
+    <MARQUEE>Deze code is nog niet uitontwikkeld !!!</MARQUEE>
+    <BR><DIV class="titel">Technisch datamodel voor schema <CODE>UHR_LADEN</CODE></DIV>
+    <BR><DIV class="colofon">Versienummer: <CODE>2.3.3</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd op <CODE>2026/06/25 11:35:35</CODE></DIV>
+    <BR><DIV class="colofon">Gegenereerd door de HTML2Word <CODE>FUNCTION</CODE> <CODE>GET_TAB_TF</CODE></DIV>
+    <BR><DIV class="colofon">Tabelbreedtes zijn geoptimaliseerd voor copy&amp;paste naar A4 formaat documenten in Word</DIV>
+    <H1>1 - Inhoudsopgave</H1><HR>
+      <A href="#Tabellen">2 - Tabellen</A>
+      <BR><A href="#Views">3 - Views</A>
+      <BR><A href="#Procedures">4 - Procedures</A>
+      <BR><SMALL><A href="#GRANT_SUID_TABLES_ADMIN">4.1 - GRANT_SUID_TABLES_ADMIN</A></SMALL>
+      <BR><A href="#Functions">5 - Functions</A>
+      <BR><A href="#Packages">6 - Packages</A>
+      <BR><SMALL><A href="#UHR_FOUTLOGGING">6.1 - UHR_FOUTLOGGING</A></SMALL>
+      <BR><SMALL><A href="#UHR_ONDERHOUD">6.2 - UHR_ONDERHOUD</A></SMALL>
+      <BR><SMALL><A href="#UHR03_LAADMODULE">6.3 - UHR03_LAADMODULE</A></SMALL>
+      <BR><SMALL><A href="#UHR03_LAADMODULE_UI">6.4 - UHR03_LAADMODULE_UI</A></SMALL>
+      <BR><SMALL><A href="#UHR03_UPDATE_UHRCORE">6.5 - UHR03_UPDATE_UHRCORE</A></SMALL>
+      <BR><A href="#Sequences">7 - Sequences</A>
+      <BR><A href="#Synonyms">8 - Synonyms</A>
+      <BR><A href="#Grants_received">9 - Grants received</A>
+      <BR><SMALL><A href="#SYS_grants_received">9.1 - SYS grants</A></SMALL>
+      <BR><SMALL><A href="#Object_grants_received">9.2 - Grants on user objects</A></SMALL>
+    <H1><A name="Tabellen"></A>2 - Tabellen</H1><HR>
+    <H1><A name="Views"></A>3 - Views</H1><HR>
+    <H1><A name="Procedures"></A>4 - Procedures</H1><HR>
+      <H2><A name="GRANT_SUID_TABLES_ADMIN"></A>3.1 - GRANT_SUID_TABLES_ADMIN</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+          <TR class="odd smallertxt"><TD><CODE>P_USER</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Functions"></A>5 - Functions</H1><HR>
+    <H1><A name="Packages"></A>6 - Packages</H1><HR>
+      <H2><A name="UHR_FOUTLOGGING"></A>6.1 - UHR_FOUTLOGGING</H2>
+      Procedure: <CODE>LEG_FOUT_VAST</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_FOUTMELDING</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_STATUS_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>LEG_OVERIGE_FOUT_VAST</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_FOUTMELDING</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_STATUS_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UHR_ONDERHOUD"></A>6.2 - UHR_ONDERHOUD</H2>
+      Procedure: <CODE>DATABERICHT_OPVRAGEN_BIJ_KVK</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_BSN</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_RSIN</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_AANVRAGER</CODE></TD><TD>IN</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_BATCH_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_STATUS</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_MELDING</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>HERHAAL_REQUEST_REQID</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_REQID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_FOUTCODE</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_FOUTTEKST</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>VERWIJDER_INSCHRIJVING</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_FOUTCODE</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_FOUTTEKST</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>ZET_UITVAL_OP_VERWERKT</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_OUDER_DAN</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_BATCH_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UHR03_LAADMODULE"></A>6.3 - UHR03_LAADMODULE</H2>
+      Procedure: <CODE>GET_VERSIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_VERSIE</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>LADEN_XML</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_VERWERKING_GESLAAGD</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_BATCH</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_BATCH_SIZE</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_AANTAL_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_LAADMODULE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_LAADMODULE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_LAADMODULE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_SIZE</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_AANTAL_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UHR03_LAADMODULE_UI"></A>6.4 - UHR03_LAADMODULE_UI</H2>
+      Procedure: <CODE>GET_VERSIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_VERSIE</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>LADEN_XML</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_DBERID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_VERWERKING_GESLAAGD</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_BATCH</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_BATCH_SIZE</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_AANTAL_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_LAADMODULE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_LAADMODULE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>TEST</CODE></TD><TD>IN</TD><TD><CODE>PL/SQL BOOLEAN</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>START_LAADMODULE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even smallertxt"><TD><CODE>P_BATCH_SIZE</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_AANTAL_VERWERKT</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+      <H2><A name="UHR03_UPDATE_UHRCORE"></A>6.5 - UHR03_UPDATE_UHRCORE</H2>
+      Procedure: <CODE>GET_VERSIE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_VERSIE</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_ACTIVITEIT_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_ACTIVITEIT_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_ADRES_BIN_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_ADRES_BIN_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_ADRES_BUIT_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_ADRES_BUIT_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_BUITENL_VENNSCH_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_BUITENLANDSEVENNOOTSCHAP_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_COMMUN_GEGEVEN_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_COMMUNICATIEGEGEVEN_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_HANDELSNAAM_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_HANDELSNAAM_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_LOCATIE_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_LOCATIE_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_NAAM_PERSOON_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_NAAM_PERSOON_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_NATUURL_PERSOON_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_NATUURLIJKEPERSOON_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_PERSOON_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_PERSOON_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Function: <CODE>INLEES2UHR_RECHTSPERSOON_ID</CODE> RETURN<CODE> NUMBER</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="even"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd"><TD><CODE>P_RECHTSPERSOON_ID</CODE></TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even"><TD><CODE>P_TS_ACTIEF</CODE></TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE><BR>
+      Procedure: <CODE>UPDATE_UHRCORE</CODE><BR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Parameter</TH><TH class="datatype">In Out</TH><TH class="datatype">Datatype</TH><TH class="data_default">Default</TH></TR></THEAD>
+        <BODY>
+          <TR class="odd smallertxt"><TD><CODE>P_KVK_NUMMER</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_TS_SESSIE</CODE></TD><TD>IN</TD><TD><CODE>TIMESTAMP</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_BATCH_ID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_DBERID</CODE></TD><TD>IN</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="odd smallertxt"><TD><CODE>P_ERR_CODE_UPD</CODE></TD><TD>OUT</TD><TD><CODE>NUMBER</CODE></TD><TD></TD></TR>
+          <TR class="even smallertxt"><TD><CODE>P_ERR_MSG_UPD</CODE></TD><TD>OUT</TD><TD><CODE>VARCHAR2</CODE></TD><TD></TD></TR>
+        </TBODY>
+      </TABLE>
+  </BODY>
+</HTML>
+    <H1><A name="Sequences"></A>7 - Sequences</H1><HR>
+      Geen sequences gedefinieerd voor deze gebruiker
+    <H1><A name="Synonyms"></A>8 - Synonyms</H1><HR>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Synonym</TH><TH class="datatype">Object owner</TH><TH class="datatype">Object name</TH><TH class="datatype">Database link</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UA_DATA_BERICHT_KVK</CODE></TD><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_BERICHT_KVK</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UA_DATA_REQUEST_AAN_KVK</CODE></TD><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_REQUEST_AAN_KVK</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UA_DATA_REQUEST_AAN_KVK_LOG</CODE></TD><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_REQUEST_AAN_KVK_LOG</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UA_UITGEVALLEN_BERICHT</CODE></TD><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_UITGEVALLEN_BERICHT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_ACTIVITEITEN</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ACTIVITEITEN</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_ACTIVITEIT_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ACTIVITEIT_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_BIN_ADRES_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BIN_ADRES_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_BUIT_ADRES_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUIT_ADRES_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_BUITENL_VENNOOTSCH_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENL_VENNOOTSCH_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_CODE_SBICODE</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_SBICODE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_COMMUNICATIEGEGEVEN_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUNICATIEGEGEVEN_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_EENMANSZAAKMEEREIGENAREN</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_EENMANSZAAKMEEREIGENAREN</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_HANDELSNAAM</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_HANDELSNAAM</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_HANDELSNAAM_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_HANDELSNAAM_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_KOPP_ACTIVITEIT_SBI_ACT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_KOPP_ACTIVITEIT_SBI_ACT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_LOCATIE_PERSOON</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_PERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_LOCATIE_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_LOCATIE_VESTIGING</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_NAAMPERSOON</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NAAMPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_NAAMPERSOON_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NAAMPERSOON_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_NATUUURLIJKEPERSOON_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUUURLIJKEPERSOON_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_ONDERNEMING</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERNEMING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_PERSOON_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_RECHTSPERSOON_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHR_GET_PARAMETER</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UHR_GET_PARAMETER</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHR_RUN_STATS</CODE></TD><TD><CODE>UWV_META</CODE></TD><TD><CODE>UHR_RUN_STATS</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHR_WACHTKAMER_PCK</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UHR_WACHTKAMER_PCK</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_SAMENWERKINGSVERBAND</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SAMENWERKINGSVERBAND</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_SBI_ACTIVITEIT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBI_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_SBI_ACTIVITEIT_MAATSCH_ACT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBI_ACTIVITEIT_MAATSCH_ACT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_SBI_ACTIVITEIT_ONDERNEMING</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBI_ACTIVITEIT_ONDERNEMING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_SBI_ACT_SEQ</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBI_ACT_SEQ</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_ONDERNEMING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_SBICODE_VESTIGING</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UH_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_VESTIGING</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UH_WACHTKAMER</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_WACHTKAMER</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_ACTIVITEITEN</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ACTIVITEITEN</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_BINNENLANDS_ADRES</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BINNENLANDS_ADRES</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_BUITENLANDS_ADRES</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDS_ADRES</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_CODE_SBICODE</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_CODE_SBICODE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_HANDELSNAAM</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_HANDELSNAAM</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_KOPP_ACTIVITEIT_SBI_ACT</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_KOPP_ACTIVITEIT_SBI_ACT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_LOCATIE</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_LOCATIE_PERSOON</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_PERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_LOCATIE_VESTIGING</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_NAAMPERSOON</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NAAMPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_NATUURLIJKPERSOON</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NATUURLIJKPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_ONDERNEMING</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERNEMING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_PERSOON</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_PERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_RECHTSPERSOON</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_RECHTSPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_SBI_ACTIVITEIT</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBI_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_SBI_ACTIVITEIT_MAATSCH_ACT</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBI_ACTIVITEIT_MAATSCH_ACT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_SBI_ACTIVITEIT_ONDERNEMING</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBI_ACTIVITEIT_ONDERNEMING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_ONDERNEMING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_SBICODE_VESTIGING</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UI_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UI_VESTIGING</CODE></TD><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VESTIGING</CODE></TD><TD><CODE></CODE></TD></TR>
+          <TR class="even"><TD><CODE>UL_PARAMETERS</CODE></TD><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UL_PARAMETERS</CODE></TD><TD><CODE></CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H1><A name="Grants_received"></A>9 - Grants received</H1><HR>
+    <H2><A name="SYS_grants_received"></A>9.1 - SYS grants</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Privilege</TH><TH class="kolomnaam">Admin option</TH></TR></THEAD>
+        <TBODY>
+          <TR class="odd"><TD><CODE>CREATE SYNONYM</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>CREATE VIEW</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+    <H2><A name="Object_grants_received"></A>9.2 - Grants on user objects</H2>
+      <TABLE>
+        <THEAD><TR><TH class="kolomnaam">Owner</TH><TH class="kolomnaam">Object name</TH><TH class="kolomnaam">Privilege</TH><TH class="kolomnaam">Grantable</TH></TR></THEAD>
+        <TBODY>
+          <TR class="even"><TD><CODE>SCALAADMIN</CODE></TD><TD><CODE>GRANT_SUID_TABLES_ADMIN_</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALADIV</CODE></TD><TD><CODE>BATCH_STATUS_LOG</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>SCALAMETA</CODE></TD><TD><CODE>BATCH</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>SYS</CODE></TD><TD><CODE>DBMS_LOCK</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>PROCESS_REQUESTS</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_BERICHT_KVK</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_BERICHT_KVK</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_BERICHT_KVK</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_REQUEST_AAN_KVK</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_REQUEST_AAN_KVK</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_REQUEST_AAN_KVK</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_DATA_REQUEST_AAN_KVK_LOG</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_UITGEVALLEN_BERICHT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_UITGEVALLEN_BERICHT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_UITGEVALLEN_BERICHT_LOG</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UA_UITGEVALLEN_BERICHT_LOG</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UHR_DBK_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UHR_DRK_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UHR_KWS_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRARCH</CODE></TD><TD><CODE>UHR_UBT_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ACTIVITEITEN</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ACTIVITEITEN</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ACTIVITEITEN</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ACTIVITEITEN</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ACTIVITEIT_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ADRES_STATUSSEN</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BIN_ADRES_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BINNENLANDS_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUIT_ADRES_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDS_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_BUITENL_VENNOOTSCH_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_AANDUID_NAAMGE_KVK2CGM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_ADRESROL_CGM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_AFGESCH_ADRES_KVK2CGM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_BIJZ_RECHTSTOE_KVK2CGM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_FICTIEVE_DATUM_CGM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_RECHTSVORM_KVK2CGM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_SBICODE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_SBICODE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_SBICODE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_SBICODE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_CODE_VESTIGING_CATEGORIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMMUNICATIEGEGEVEN_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_HANDELSNAAM</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_HANDELSNAAM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_HANDELSNAAM</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_HANDELSNAAM</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_HANDELSNAAM_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_PERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_PERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_PERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_PERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_VESTIGING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_LOCATIE_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NAAMPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NAAMPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NAAMPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NAAMPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NAAMPERSOON_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUURLIJKPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NATUUURLIJKEPERSOON_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERNEMING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERNEMING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERNEMING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERNEMING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_PERSOON_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_RECHTSPERSOON_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UHR_GET_PARAMETER</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UHR_WACHTKAMER_PCK</CODE></TD><TD><CODE>EXECUTE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBI_ACT_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_VESTIGING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_SBICODE_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_VESTIGING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_V_TNT_BIN_ADRES</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_V_TNT_BIN_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_WACHTKAMER</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_WACHTKAMER</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UH_WACHTKAMER_STATUSSEN</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UL_PARAMETERS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRCORE</CODE></TD><TD><CODE>UL_PARAMETERS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ACTIVITEITEN</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ACTIVITEITEN</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ACTIVITEITEN</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BIJZONDERE_RECHTSTOESTAND</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BINNENLANDS_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BINNENLANDS_ADRES</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BINNENLANDS_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDS_ADRES</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDS_ADRES</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDS_ADRES</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_BUITENLANDSE_VENNOOTSCHAP</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_CODE_SBICODE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_CODE_SBICODE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_CODE_SBICODE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_CODE_SBICODE</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_MAATSCH_ACT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_RECHTSPERS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUN_GEGEVENS_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMMUNICATIEGEGEVENS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_HANDELSNAAM</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_HANDELSNAAM</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_HANDELSNAAM</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_BUITENL_VENNOOTSCH</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_PERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_PERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_PERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_LOCATIE_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_MAATSCHAPPELIJKE_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NAAMPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NAAMPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NAAMPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NATUURLIJKPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NATUURLIJKPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NATUURLIJKPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_NIET_COMM_VESTIGINGRELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERNEMING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERNEMING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERNEMING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_ONDERN_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_PERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_PERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_PERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_PERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_MAATSCH_ACTIVITEIT</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_ONDERNEMING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_RECHTSPERSOON</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_VESTIGING</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_SBICODE_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VEST_HANDELSNAAM_RELATIE</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VESTIGING</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VESTIGING</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UHRIMP</CODE></TD><TD><CODE>UI_VESTIGING</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UH_BERICHTVERWERKINGSTATISTIEK</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UH_BVS_DETAILS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UHR_BVS_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UHR_RUN_STATS</CODE></TD><TD><CODE>UPDATE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UHR_RUN_STATS</CODE></TD><TD><CODE>DELETE</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UHR_RUN_STATS</CODE></TD><TD><CODE>INSERT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="even"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UHR_RUN_STATS</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+          <TR class="odd"><TD><CODE>UWV_META</CODE></TD><TD><CODE>UHR_URS_SEQ</CODE></TD><TD><CODE>SELECT</CODE></TD><TD><CODE>NO</CODE></TD></TR>
+        </TBODY>
+      </TABLE>
+  </BODY>
+</HTML>
